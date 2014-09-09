@@ -1,0 +1,41 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="atripeira.Receita"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="A Tripeira" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="Receita" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="587" Width="436">
+            	<Run Text="Etiam finibus tortor vitae est vulputate, at efficitur ipsum pretium. Vivamus dapibus metus odio, quis laoreet dolor consectetur et. Curabitur dictum nisl quis erat mattis, tincidunt interdum nisl fermentum. Nulla tellus felis, suscipit eget eros in, congue ullamcorper mauris. Nam consequat quam neque, id malesuada sapien volutpat eu. Maecenas tincidunt ut magna eget gravida. Curabitur at lobortis massa, eget ullamcorper ante. Mauris auctor lectus in sem venenatis mollis. In facilisis tincidunt odio, ac aliquet eros. Sed placerat efficitur quam, vel congue justo viverra vel. Duis tincidunt libero in velit ultrices, et malesuada nunc varius. Maecenas non aliquet nunc. Phasellus egestas volutpat magna nec ornare. Nullam id felis molestie ipsum commodo elementum. Phasellus maximus velit urna, in blandit lacus egestas id."/>
+            	<LineBreak/>
+            	<Run/>
+            	<LineBreak/>
+            	<Run/>
+            </TextBlock>
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>
