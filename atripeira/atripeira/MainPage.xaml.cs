@@ -34,6 +34,24 @@ namespace atripeira
             }
         }
 
+        
+
+        private void TextBlock_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Historia.xaml", UriKind.Relative));
+
+        }
+
+        private void TextBlock_Tap_1(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Ingredientes.xaml", UriKind.Relative));
+        }
+
+        private void TextBlock_Tap_2(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Receita.xaml", UriKind.Relative));
+        }
+
         // Sample code for building a localized ApplicationBar
         //private void BuildLocalizedApplicationBar()
         //{
