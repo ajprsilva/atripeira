@@ -38,7 +38,7 @@ namespace atripeira
 
         private void TextBlock_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/Historia.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/Restaurante.xaml", UriKind.Relative));
 
         }
 
@@ -50,6 +50,11 @@ namespace atripeira
         private void TextBlock_Tap_2(object sender, System.Windows.Input.GestureEventArgs e)
         {
             NavigationService.Navigate(new Uri("/Receita.xaml", UriKind.Relative));
+        }
+
+        private void PhoneApplicationPage_BackKeyPress(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            Application.Current.Terminate();
         }
 
         // Sample code for building a localized ApplicationBar
