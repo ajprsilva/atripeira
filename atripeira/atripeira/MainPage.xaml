@@ -100,8 +100,23 @@
                                 <!--Replace rectangle with image-->
                                 <Border BorderThickness="1" Width="99" Height="99" BorderBrush="#B2EE4D10" Background="#B2EE4D10"/>
                                 <StackPanel Width="311" Margin="8,-7,0,0">
-                                    <TextBlock Text="{Binding LineOne}" TextWrapping="Wrap" Margin="10,0" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}" Foreground="Black" />
-                                    <TextBlock Text="{Binding LineTwo}" TextWrapping="Wrap" Margin="10,-2,10,0" Style="{StaticResource PhoneTextSubtleStyle}" Foreground="#99000000" />
+                                    <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Width="311" Background="#CCFFFFFF">
+                                        <TextBlock Text="{Binding LineOne}" TextWrapping="Wrap" Margin="10,0" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}" Foreground="Black" />
+                                    </StackPanel>
+                                    <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Width="311" Height="46" Background="#CCFFFFFF">
+                                        <toolkit:Rating Width="155" Height="40" x:Name="RatingControl6" RatingItemCount="5" Value="2" Margin="0,0,0,0" VerticalAlignment="Bottom" Background="{x:Null}">
+                                            <toolkit:Rating.FilledItemStyle>
+                                                <Style TargetType="toolkit:RatingItem">
+                                                    <Setter Property="Background" Value="OrangeRed" />
+                                                </Style>
+                                            </toolkit:Rating.FilledItemStyle>
+                                            <toolkit:Rating.UnfilledItemStyle>
+                                                <Style TargetType="toolkit:RatingItem">
+                                                    <Setter Property="Background" Value="Orange" />
+                                                </Style>
+                                            </toolkit:Rating.UnfilledItemStyle>
+                                        </toolkit:Rating>
+                                    </StackPanel>
                                 </StackPanel>
                             </StackPanel>
                         </DataTemplate>
@@ -122,6 +137,7 @@
                                 </StackPanel>
                                 <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Margin="0,12,0,0">
                                     <Border Background="#FFFFC700" Height="173" Width="173" Margin="12,0,0,0"/>
+
                                     <Border Background="#FFFFC700" Height="173" Width="173" Margin="12,0,0,0"/>
 
                                 </StackPanel>
