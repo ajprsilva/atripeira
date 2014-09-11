@@ -8,6 +8,7 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using atripeira.Resources;
+using atripeira.ViewModels;
 
 namespace atripeira
 {
@@ -54,6 +55,13 @@ namespace atripeira
         private void PhoneApplicationPage_BackKeyPress(object sender, System.ComponentModel.CancelEventArgs e)
         {
             Application.Current.Terminate();
+        }
+
+        private void LongListSelector_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var temp = (ItemViewModel)lst.SelectedItem;
+            
+            NavigationService.Navigate(new Uri("/Restaurante.xaml?parameter="+temp.LineOne, UriKind.Relative));
         }
 
         // Sample code for building a localized ApplicationBar
