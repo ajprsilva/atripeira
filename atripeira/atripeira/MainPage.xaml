@@ -50,21 +50,27 @@
                     	<StackPanel Margin="36,10,-406,-268" Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Left" Width="370">
                     		<StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
                     			<Border Background="#B2EE4D10" Height="173" Width="173" Margin="12,0,0,0" >
-                    				<TextBlock FontSize="16" Foreground="White">
-                    					<Run Text="História"/>
-                    				</TextBlock>
+                    				<toolkit:WrapPanel>
+                    					<TextBlock FontSize="21.333" Foreground="White" Margin="6,143,-124,-173">
+                    						<Run Text="História"/>
+                    					</TextBlock>
+                    				</toolkit:WrapPanel>
                     			</Border>
                     			<Border Background="#B2EE4D10" Height="173" Width="173" Margin="12,0,0,0">
-                    				<TextBlock FontSize="16" Foreground="White">
-                    					<Run Text="Ingredientes"/>
-                    				</TextBlock>
+                    				<toolkit:WrapPanel>
+                    					<TextBlock FontSize="21.333" Foreground="White" Margin="6,143,-91,-173">
+                    						<Run Text="Ingredientes"/>
+                    					</TextBlock>
+                    				</toolkit:WrapPanel>
                     			</Border>
                     		</StackPanel>
                     		<StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Margin="0,12,0,0">
                     			<Border Background="#B2EE4D10" Height="173" Width="173" Margin="12,0,0,0">
-                    				<TextBlock FontSize="16" Foreground="White">
-                    					<Run Text="Receita"/>
-                    				</TextBlock>
+                    				<toolkit:WrapPanel>
+                    					<TextBlock FontSize="21.333" Foreground="White" Margin="6,144,-128,-166">
+                    						<Run Text="Receita"/>
+                    					</TextBlock>
+                    				</toolkit:WrapPanel>
                     			</Border>
                             
                     		</StackPanel>
@@ -92,7 +98,7 @@
 						<DataTemplate>
 							<StackPanel Orientation="Horizontal" Margin="12,2,0,4" Height="105" Width="432">
 								<!--Replace rectangle with image-->
-								<Border BorderThickness="1" Width="99" Height="99" BorderBrush="#FFFFC700" Background="#FFFFC700"/>
+								<Border BorderThickness="1" Width="99" Height="99" BorderBrush="#B2EE4D10" Background="#B2EE4D10"/>
 								<StackPanel Width="311" Margin="8,-7,0,0">
 									<TextBlock Text="{Binding LineOne}" TextWrapping="Wrap" Margin="10,0" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}" />
 									<TextBlock Text="{Binding LineTwo}" TextWrapping="Wrap" Margin="10,-2,10,0" Style="{StaticResource PhoneTextSubtleStyle}" />
