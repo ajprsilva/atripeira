@@ -43,7 +43,7 @@
                 <ImageBrush ImageSource="/teste1.png"/>
             </phone:Pivot.Background>
             <!--Pivot item one-->
-            <phone:PivotItem Header="Tripas">
+            <phone:PivotItem Header="As Tripas">
                 <!--Double line list with text wrapping-->
                 <Grid>
                     <toolkit:WrapPanel HorizontalAlignment="Left" Height="426" VerticalAlignment="Top" Width="446">
@@ -100,8 +100,8 @@
                                 <!--Replace rectangle with image-->
                                 <Border BorderThickness="1" Width="99" Height="99" BorderBrush="#B2EE4D10" Background="#B2EE4D10"/>
                                 <StackPanel Width="311" Margin="8,-7,0,0">
-                                    <TextBlock Text="{Binding LineOne}" TextWrapping="Wrap" Margin="10,0" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}" />
-                                    <TextBlock Text="{Binding LineTwo}" TextWrapping="Wrap" Margin="10,-2,10,0" Style="{StaticResource PhoneTextSubtleStyle}" />
+                                    <TextBlock Text="{Binding LineOne}" TextWrapping="Wrap" Margin="10,0" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}" Foreground="Black" />
+                                    <TextBlock Text="{Binding LineTwo}" TextWrapping="Wrap" Margin="10,-2,10,0" Style="{StaticResource PhoneTextSubtleStyle}" Foreground="#99000000" />
                                 </StackPanel>
                             </StackPanel>
                         </DataTemplate>
