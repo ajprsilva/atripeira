@@ -16,9 +16,9 @@
     shell:SystemTray.IsVisible="True" BackKeyPress="PhoneApplicationPage_BackKeyPress">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-	<Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot" Background="Transparent">
 
-		<!-- LOCALIZATION NOTE:
+        <!-- LOCALIZATION NOTE:
             To localize the displayed strings copy their values to appropriately named
             keys in the app's neutral language resource file (AppResources.resx) then
             replace the hard-coded text value between the attributes' quotation marks
@@ -37,110 +37,121 @@
             CurrentUICulture of the app at run time.
          -->
 
-		<!--Pivot Control-->
-		<phone:Pivot Title="A Tripeira" HorizontalAlignment="Left" Width="480" Foreground="Black">
-			<phone:Pivot.Background>
-				<ImageBrush ImageSource="Tripeira1-01.jpg" Stretch="Uniform"/>
-			</phone:Pivot.Background>
-			<!--Pivot item one-->
-			<phone:PivotItem Header="Tripas">
-				<!--Double line list with text wrapping-->
+        <!--Pivot Control-->
+        <phone:Pivot Title="A Tripeira" HorizontalAlignment="Left" Width="480" Foreground="Black">
+            <phone:Pivot.Background>
+                <ImageBrush ImageSource="/teste1.png"/>
+            </phone:Pivot.Background>
+            <!--Pivot item one-->
+            <phone:PivotItem Header="Tripas">
+                <!--Double line list with text wrapping-->
                 <Grid>
                     <toolkit:WrapPanel HorizontalAlignment="Left" Height="426" VerticalAlignment="Top" Width="446">
-                    	<StackPanel Margin="36,10,-406,-268" Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Left" Width="370">
-                    		<StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
-                    			<Border Background="#B2EE4D10" Height="173" Width="173" Margin="12,0,0,0" >
-                    				<toolkit:WrapPanel>
-                    					<TextBlock FontSize="21.333" Foreground="White" Margin="6,143,-124,-173">
+                        <StackPanel Margin="36,10,-406,-268" Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Left" Width="370">
+                            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
+                                <Border Background="#B2EE4D10" Height="173" Width="173" Margin="12,0,0,0" Tap="TextBlock_Tap" >
+                                    <toolkit:WrapPanel>
+                                        <TextBlock FontSize="21.333" Foreground="White" Margin="6,143,-124,-173">
                     						<Run Text="História"/>
-                    					</TextBlock>
-                    				</toolkit:WrapPanel>
-                    			</Border>
-                    			<Border Background="#B2EE4D10" Height="173" Width="173" Margin="12,0,0,0">
-                    				<toolkit:WrapPanel>
-                    					<TextBlock FontSize="21.333" Foreground="White" Margin="6,143,-91,-173">
+                                        </TextBlock>
+                                    </toolkit:WrapPanel>
+                                </Border>
+                                <Border Background="#B2EE4D10" Height="173" Width="173" Margin="12,0,0,0" Tap="TextBlock_Tap_1">
+                                    <toolkit:WrapPanel>
+                                        <TextBlock FontSize="21.333" Foreground="White" Margin="6,143,-91,-173">
                     						<Run Text="Ingredientes"/>
-                    					</TextBlock>
-                    				</toolkit:WrapPanel>
-                    			</Border>
-                    		</StackPanel>
-                    		<StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Margin="0,12,0,0">
-                    			<Border Background="#B2EE4D10" Height="173" Width="173" Margin="12,0,0,0">
-                    				<toolkit:WrapPanel>
-                    					<TextBlock FontSize="21.333" Foreground="White" Margin="6,144,-128,-166">
+                                        </TextBlock>
+                                    </toolkit:WrapPanel>
+                                </Border>
+                            </StackPanel>
+                            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Margin="0,12,0,0">
+                                <Border Background="#B2EE4D10" Height="173" Width="173" Margin="12,0,0,0" Tap="TextBlock_Tap_2">
+                                    <toolkit:WrapPanel>
+                                        <TextBlock FontSize="21.333" Foreground="White" Margin="6,144,-128,-166">
                     						<Run Text="Receita"/>
-                    					</TextBlock>
-                    				</toolkit:WrapPanel>
-                    			</Border>
-                            
-                    		</StackPanel>
-                    	</StackPanel>
+                                        </TextBlock>
+                                    </toolkit:WrapPanel>
+                                </Border>
+
+                            </StackPanel>
+                        </StackPanel>
                     </toolkit:WrapPanel>
                 </Grid>
             </phone:PivotItem>
 
-            
-            
-			<!--Pivot item two-->
-			<phone:PivotItem Header="Restaurantes">
-				<phone:LongListSelector Margin="0,-38,-22,2" ItemsSource="{Binding Items}">
-					<phone:LongListSelector.ListHeaderTemplate>
-						<DataTemplate>
-							<Grid Margin="12,0,0,38">
-								<Grid.RowDefinitions>
-									<RowDefinition Height="Auto"/>
-									<RowDefinition Height="*"/>
-								</Grid.RowDefinitions>
-							</Grid>
-						</DataTemplate>
-					</phone:LongListSelector.ListHeaderTemplate>
-					<phone:LongListSelector.ItemTemplate>
-						<DataTemplate>
-							<StackPanel Orientation="Horizontal" Margin="12,2,0,4" Height="105" Width="432">
-								<!--Replace rectangle with image-->
-								<Border BorderThickness="1" Width="99" Height="99" BorderBrush="#B2EE4D10" Background="#B2EE4D10"/>
-								<StackPanel Width="311" Margin="8,-7,0,0">
-									<TextBlock Text="{Binding LineOne}" TextWrapping="Wrap" Margin="10,0" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}" />
-									<TextBlock Text="{Binding LineTwo}" TextWrapping="Wrap" Margin="10,-2,10,0" Style="{StaticResource PhoneTextSubtleStyle}" />
-								</StackPanel>
-							</StackPanel>
-						</DataTemplate>
-					</phone:LongListSelector.ItemTemplate>
-				</phone:LongListSelector>
-			</phone:PivotItem>
 
-			<phone:PivotItem Header="Videos">
-				<phone:Panorama>
-					<phone:PanoramaItem Orientation="Horizontal">
-						<!--Double wide Panorama with large image placeholders-->
-						<Grid>
-							<StackPanel Margin="0,4,16,0" Orientation="Vertical" VerticalAlignment="Top">
-								<StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
-									<Border Background="#FFFFC700" Height="173" Width="173" Margin="12,0,0,0"/>
-									<Border Background="#FFFFC700" Height="173" Width="173" Margin="12,0,0,0"/>
-									
-								</StackPanel>
-								<StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Margin="0,12,0,0">
-									<Border Background="#FFFFC700" Height="173" Width="173" Margin="12,0,0,0"/>
-									<Border Background="#FFFFC700" Height="173" Width="173" Margin="12,0,0,0"/>
-									
-								</StackPanel>
-							</StackPanel>
-						</Grid>
-					</phone:PanoramaItem>
-				</phone:Panorama>
-			</phone:PivotItem>
-		</phone:Pivot>
 
-        
+            <!--Pivot item two-->
+            <phone:PivotItem Header="Restaurantes">
+                <phone:LongListSelector Margin="0,-38,-22,2" ItemsSource="{Binding Items}">
+                    <phone:LongListSelector.ListHeaderTemplate>
+                        <DataTemplate>
+                            <Grid Margin="12,0,0,38">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                            </Grid>
+                        </DataTemplate>
+                    </phone:LongListSelector.ListHeaderTemplate>
+                    <phone:LongListSelector.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" Margin="12,2,0,4" Height="105" Width="432">
+                                <!--Replace rectangle with image-->
+                                <Border BorderThickness="1" Width="99" Height="99" BorderBrush="#B2EE4D10" Background="#B2EE4D10"/>
+                                <StackPanel Width="311" Margin="8,-7,0,0">
+                                    <TextBlock Text="{Binding LineOne}" TextWrapping="Wrap" Margin="10,0" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}" />
+                                    <TextBlock Text="{Binding LineTwo}" TextWrapping="Wrap" Margin="10,-2,10,0" Style="{StaticResource PhoneTextSubtleStyle}" />
+                                </StackPanel>
+                            </StackPanel>
+                        </DataTemplate>
+                    </phone:LongListSelector.ItemTemplate>
+                </phone:LongListSelector>
+            </phone:PivotItem>
 
-		<!--Uncomment to see an alignment grid to help ensure your controls are
+            <phone:PivotItem Header="Videos">
+                <phone:Panorama>
+                    <phone:PanoramaItem Orientation="Horizontal">
+                        <!--Double wide Panorama with large image placeholders-->
+                        <Grid>
+                            <StackPanel Margin="0,4,16,0" Orientation="Vertical" VerticalAlignment="Top">
+                                <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
+                                    <Border Background="#FFFFC700" Height="173" Width="173" Margin="12,0,0,0"/>
+                                    <Border Background="#FFFFC700" Height="173" Width="173" Margin="12,0,0,0"/>
+
+                                </StackPanel>
+                                <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Margin="0,12,0,0">
+                                    <Border Background="#FFFFC700" Height="173" Width="173" Margin="12,0,0,0"/>
+                                    <Border Background="#FFFFC700" Height="173" Width="173" Margin="12,0,0,0"/>
+
+                                </StackPanel>
+                            </StackPanel>
+                        </Grid>
+                    </phone:PanoramaItem>
+                </phone:Panorama>
+            </phone:PivotItem>
+        </phone:Pivot>
+
+
+
+        <!--Uncomment to see an alignment grid to help ensure your controls are
             aligned on common boundaries.  The image has a top margin of -32px to
             account for the System Tray. Set this to 0 (or remove the margin altogether)
             if the System Tray is hidden.
 
             Before shipping remove this XAML and the image itself.-->
-		<!--<Image Source="/Assets/AlignmentGrid.png" VerticalAlignment="Top" Height="800" Width="480" Margin="0,-32,0,0" Grid.Row="0" IsHitTestVisible="False" />-->
-	</Grid>
+        <!--<Image Source="/Assets/AlignmentGrid.png" VerticalAlignment="Top" Height="800" Width="480" Margin="0,-32,0,0" Grid.Row="0" IsHitTestVisible="False" />-->
+    </Grid>
+
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
 
 </phone:PhoneApplicationPage>
