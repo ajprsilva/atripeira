@@ -7,14 +7,19 @@ using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using atripeira.ViewModels;
 
 namespace atripeira
 {
     public partial class Receita : PhoneApplicationPage
     {
-        public Receita()
+       private tripasViewModel TripasViewModel = new tripasViewModel();
+
+       public Receita()
         {
             InitializeComponent();
+            DataContext = TripasViewModel;
+            TripasViewModel.LoadData();
         }
     }
 }

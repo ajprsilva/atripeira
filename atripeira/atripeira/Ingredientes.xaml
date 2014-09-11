@@ -28,8 +28,13 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus turpis urna, vitae mollis nisi cursus at. Etiam non quam massa. Donec at elementum nibh, accumsan pellentesque dolor. Praesent faucibus odio eros, in viverra libero viverra non. Nulla faucibus mattis purus non efficitur. Sed congue ultricies lorem, non sollicitudin lectus feugiat id. Aenean pellentesque semper vulputate. Sed rhoncus massa nisi, at molestie nisl mattis ac. Integer aliquet blandit dapibus. Nunc metus metus, euismod eu urna scelerisque, tristique semper leo. Pellentesque nec eros sagittis, maximus eros non, posuere risus. Etiam convallis justo ac augue varius, ac porttitor justo eleifend. Nulla commodo libero augue, in vestibulum nunc vulputate ac. Nulla quis mollis purus. Curabitur lobortis, augue sed scelerisque bibendum, justo nisi tempus metus, a feugiat leo lorem a erat. Pellentesque nec efficitur arcu." VerticalAlignment="Top" Height="587" Width="436"/>
-
+            <phone:LongListSelector ItemsSource="{Binding Items}">
+                <phone:LongListSelector.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="587" Width="436"  Text="{Binding LineTwo}"/>
+                    </DataTemplate>
+                </phone:LongListSelector.ItemTemplate>
+            </phone:LongListSelector>
         </Grid>
     </Grid>
 
