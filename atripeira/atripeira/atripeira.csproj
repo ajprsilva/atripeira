@@ -230,6 +230,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Clérigos_01.jpg" />
+    <Resource Include="desenho01-15.jpg" />
     <Resource Include="Tripeira1-01.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
