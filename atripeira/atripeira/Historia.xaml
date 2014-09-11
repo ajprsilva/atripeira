@@ -36,7 +36,6 @@
                     </DataTemplate>
                 </phone:LongListSelector.ItemTemplate>
             </phone:LongListSelector>
-            
         </Grid>
     </Grid>
 </phone:PhoneApplicationPage>
