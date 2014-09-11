@@ -24,14 +24,18 @@
 			</phone:Pivot.Background>
 
 			<!--Pivot item one-->
-			<phone:PivotItem Header="Restaurante A" Name="pivotRestName" Background="Transparent" Foreground="Black">
+			<phone:PivotItem Header="Restaurante" Background="Transparent" Foreground="Black">
 				<Grid HorizontalAlignment="Left" Height="531" VerticalAlignment="Top" Width="456">
 					<toolkit:WrapPanel HorizontalAlignment="Left" Height="531" VerticalAlignment="Top" Width="456" Background="Transparent">
 						<StackPanel HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Margin="0,0,-100,-100" Background="#B2EE4D10"/>
 						<StackPanel HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="356" Margin="100,0,-456,-100" Background="#B2FFFFFF">
-							<StackPanel Height="50"/>
-							<StackPanel Height="50"/>
-						</StackPanel>
+							<StackPanel Height="50">
+                                <TextBlock TextWrapping="Wrap" Name="txtNome" Text="Nome" Height="100"/>
+                            </StackPanel>
+                            <StackPanel Height="50">
+                                <TextBlock TextWrapping="Wrap" Name="txtMorada" Text="Morada" Height="100"/>
+                            </StackPanel>
+                        </StackPanel>
 						<StackPanel HorizontalAlignment="Left" Height="426" VerticalAlignment="Top" Width="456" Margin="0,105,-456,-531">
 							<StackPanel Height="100" Background="#B2FFFFFF">
 								<TextBlock TextWrapping="Wrap" Text="Texto de introdução" Height="100"/>
@@ -49,10 +53,10 @@
 				<StackPanel Margin="14,10,10,23" Width="432" HorizontalAlignment="Left" VerticalAlignment="Top">
 					<StackPanel Height="100" Margin="10,0,-23,0" Orientation="Horizontal">
 						<StackPanel Height="100" Width="81" Background="#B2FFFFFF">
-							<TextBlock Margin="10,10,-15,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="73" Width="73" FontSize="48" Foreground="Black" HorizontalAlignment="Left" Text="4.0"/>
+							<TextBlock Margin="10,10,-15,0" Name="ratingNum" TextWrapping="Wrap" VerticalAlignment="Top" Height="73" Width="73" FontSize="48" Foreground="Black" HorizontalAlignment="Left" Text="4.0"/>
 						</StackPanel>
 						<StackPanel Height="100" Width="344" Background="#B2FFFFFF">
-							<toolkit:Rating Width="Auto" Height="64" x:Name="RatingControl6" RatingItemCount="5" Value="2" Margin="58,0,0,0" VerticalAlignment="Bottom" Background="{x:Null}">
+							<toolkit:Rating Width="Auto" Height="64" x:Name="RatingControl6" RatingItemCount="5" Value="2" Margin="58,0,0,0" VerticalAlignment="Bottom" Background="{x:Null}" ReadOnly="True">
 								<toolkit:Rating.FilledItemStyle>
 									<Style TargetType="toolkit:RatingItem">
 										<Setter Property="Background" Value="Red" />

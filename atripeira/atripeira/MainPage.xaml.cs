@@ -52,6 +52,11 @@ namespace atripeira
             NavigationService.Navigate(new Uri("/Receita.xaml", UriKind.Relative));
         }
 
+        private void TextBlock_Tap_3(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Videos.xaml", UriKind.Relative));
+        }
+
         private void PhoneApplicationPage_BackKeyPress(object sender, System.ComponentModel.CancelEventArgs e)
         {
             Application.Current.Terminate();
@@ -61,8 +66,9 @@ namespace atripeira
         {
             var temp = (ItemViewModel)lst.SelectedItem;
             
-            NavigationService.Navigate(new Uri("/Restaurante.xaml?parameter="+temp.LineOne, UriKind.Relative));
+            NavigationService.Navigate(new Uri("/Restaurante.xaml?parameter="+temp.LineThree, UriKind.Relative));
         }
+
 
         // Sample code for building a localized ApplicationBar
         //private void BuildLocalizedApplicationBar()

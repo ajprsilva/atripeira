@@ -26,12 +26,12 @@ namespace atripeira.ViewModels
             }
         }
 
-        private string _lineTwo;
+        private double _lineTwo;
         /// <summary>
         /// Sample ViewModel property; this property is used in the view to display its value using a Binding.
         /// </summary>
         /// <returns></returns>
-        public string LineTwo
+        public double LineTwo
         {
             get
             {

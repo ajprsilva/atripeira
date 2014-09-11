@@ -14,13 +14,13 @@ namespace atripeira.ViewModels
 
         public tripasViewModel()
         {
-            this.Items = new ObservableCollection<ItemViewModel>();
+            this.Items = new ObservableCollection<tripaViewModel>();
         }
 
         /// <summary>
         /// A collection for ItemViewModel objects.
         /// </summary>
-        public ObservableCollection<ItemViewModel> Items { get; private set; }
+        public ObservableCollection<tripaViewModel> Items { get; private set; }
 
         private string _sampleProperty = "Sample Runtime Property Value";
         /// <summary>
@@ -74,7 +74,7 @@ namespace atripeira.ViewModels
             }            
             
             // Sample data; replace with real data
-            this.Items.Add(new ItemViewModel() { LineOne = items[0].historia, LineTwo = items[0].ingredientes, LineThree = items[0].receita });
+            this.Items.Add(new tripaViewModel() { LineOne = items[0].historia, LineTwo = items[0].ingredientes, LineThree = items[0].receita });
             this.IsDataLoaded = true;
         }
 

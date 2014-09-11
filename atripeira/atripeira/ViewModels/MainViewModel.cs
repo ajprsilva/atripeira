@@ -4,6 +4,8 @@ using System.ComponentModel;
 using atripeira.Resources;
 using Microsoft.WindowsAzure.MobileServices;
 using atripeira.DataModels;
+using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace atripeira.ViewModels
 {
@@ -78,10 +80,24 @@ namespace atripeira.ViewModels
             }
 
             foreach (restaurante resta in items) {
-                this.Items.Add(new ItemViewModel() { LineOne = resta.nome, LineTwo = resta.morada });
+                this.Items.Add(new ItemViewModel() { LineOne = resta.nome, LineTwo = Double.Parse(resta.Pontuacao), LineThree= resta.Id });
             }
 
             this.IsDataLoaded = true;
+        }
+
+        public async Task<restaurante> LoadDataRestaurante(string id)
+        {
+            try
+            {
+                items = await todoTable.Where(todoItem => todoItem.Id == id).ToCollectionAsync();
+            }
+            catch (Exception ex)
+            {
+                string st = ex.Message.ToString();
+            }
+
+            return items[0];
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
