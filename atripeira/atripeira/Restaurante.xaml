@@ -21,7 +21,7 @@
 		<phone:Pivot Title="A Tripeira">
 
 			<!--Pivot item one-->
-			<phone:PivotItem Header="Restaurante A"/>
+			<phone:PivotItem Header="Restaurante A" Name="pivotRestName"/>
 
 			<!--Pivot item two-->
 			<phone:PivotItem Header="Opinião Cliente" Margin="10,10,14,18">
