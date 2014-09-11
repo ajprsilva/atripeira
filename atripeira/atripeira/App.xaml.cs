@@ -8,12 +8,16 @@ using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using atripeira.Resources;
 using atripeira.ViewModels;
+using Microsoft.WindowsAzure.MobileServices;
 
 namespace atripeira
 {
     public partial class App : Application
     {
         private static MainViewModel viewModel = null;
+        
+
+        public static MobileServiceClient MobileService = new MobileServiceClient("https://pscatripeira.azure-mobile.net/", "YGtTayaWczKHOmoYAUbwZBUdCcBCPx27");
 
         /// <summary>
         /// A static ViewModel used by the views to bind against.
@@ -30,6 +34,8 @@ namespace atripeira
                 return viewModel;
             }
         }
+
+        
 
         /// <summary>
         /// Provides easy access to the root frame of the Phone Application.

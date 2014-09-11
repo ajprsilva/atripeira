@@ -11,8 +11,8 @@
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d"
-    shell:SystemTray.IsVisible="True">
-
+    shell:SystemTray.IsVisible="True" >
+    
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
         <Grid.RowDefinitions>
@@ -26,13 +26,17 @@
             <TextBlock Text="História" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
-        
+       
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="587" Width="436">
-            	<Run Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac est at diam vehicula convallis. In ac luctus ligula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas semper turpis vel odio porta vestibulum. Suspendisse commodo lacus ac erat rhoncus dictum at quis risus. Nulla facilisi. Donec pulvinar risus eu enim aliquet sollicitudin. Maecenas sed dolor nec felis molestie interdum. Praesent quis arcu dignissim, bibendum ex a, ultrices est. Integer at metus eget erat consequat pellentesque et sit amet mi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin vehicula dui nec laoreet hendrerit."/>
-            	<Run Text="."/>
-            </TextBlock>
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0" >
+            <phone:LongListSelector ItemsSource="{Binding Items}">
+                <phone:LongListSelector.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="587" Width="436"  Text="{Binding LineOne}"/>
+                    </DataTemplate>
+                </phone:LongListSelector.ItemTemplate>
+            </phone:LongListSelector>
+            
         </Grid>
     </Grid>
 </phone:PhoneApplicationPage>

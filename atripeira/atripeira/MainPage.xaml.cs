@@ -38,8 +38,7 @@ namespace atripeira
 
         private void TextBlock_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/Restaurante.xaml", UriKind.Relative));
-
+            NavigationService.Navigate(new Uri("/Historia.xaml", UriKind.Relative));
         }
 
         private void TextBlock_Tap_1(object sender, System.Windows.Input.GestureEventArgs e)
