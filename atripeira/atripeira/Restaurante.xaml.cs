@@ -16,5 +16,19 @@ namespace atripeira
         {
             InitializeComponent();
         }
+        public void calcRating(double soma,int numpessoas) {
+
+            double rating;
+
+            rating = soma / numpessoas;
+        }
+        public void addRating(double higiene, double localizacao, double conforto, double atendimento, double qualidadepreco) {
+
+            double soma;
+            soma = (higiene + localizacao + conforto + atendimento + qualidadepreco)/5;
+            //adicionar soma a bd
+        }
     }
+
+    
 }
