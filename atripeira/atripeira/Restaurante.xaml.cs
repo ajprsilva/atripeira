@@ -16,16 +16,6 @@ namespace atripeira
         {
             InitializeComponent();
         }
-
-        protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
-            string parameter = string.Empty;
-            if (NavigationContext.QueryString.TryGetValue("parameter", out parameter))
-            {
-                pivotRestName.Header = parameter;
-            }
-        }
-
         public void calcRating(double soma,int numpessoas) {
 
             double rating;
