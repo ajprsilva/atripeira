@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
-  <DefaultLanguage xmlns="" code="en-US" />
-  <App xmlns="" ProductID="{776bb7c5-2b89-49ef-b28c-342945913144}" Title="A Tripeira" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="atripeira author" Description="Sample description" Publisher="atripeira" PublisherID="{4d66fab3-2f9c-433a-80c3-b620afe1860d}">
+  <DefaultLanguage xmlns="" code="pt" />
+  <App xmlns="" ProductID="{776bb7c5-2b89-49ef-b28c-342945913144}" Title="A Tripeira" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="atripeira author" Description="Sample description" Publisher="A tripeira" PublisherID="{4d66fab3-2f9c-433a-80c3-b620afe1860d}">
     <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />
@@ -9,6 +9,7 @@
       <Capability Name="ID_CAP_MEDIALIB_PLAYBACK" />
       <Capability Name="ID_CAP_SENSORS" />
       <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
+      <Capability Name="ID_CAP_MAP" />
     </Capabilities>
     <Tasks>
       <DefaultTask Name="_default" NavigationPage="Introducao.xaml" />
@@ -28,8 +29,7 @@
           </BackTitle>
           <DeviceLockImageURI>
           </DeviceLockImageURI>
-          <HasLarge>
-          </HasLarge>
+          <HasLarge>False</HasLarge>
         </TemplateFlip>
       </PrimaryToken>
     </Tokens>
