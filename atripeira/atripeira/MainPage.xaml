@@ -87,7 +87,7 @@
 
             <!--Pivot item two-->
             <phone:PivotItem Header="Restaurantes">
-                <phone:LongListSelector Margin="0,-38,-22,2" ItemsSource="{Binding Items}" SelectionChanged="LongListSelector_SelectionChanged" Name="lst">
+                <phone:LongListSelector Margin="0,-38,-22,2" ItemsSource="{Binding Items}" Name="lst" Tap="lst_Tap">
                     <phone:LongListSelector.ListHeaderTemplate>
                         <DataTemplate>
                             <Grid Margin="12,0,0,38">

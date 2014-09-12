@@ -101,6 +101,7 @@
     <Compile Include="DataModels\carta.cs" />
     <Compile Include="DataModels\restaurante.cs" />
     <Compile Include="DataModels\tripas.cs" />
+    <Compile Include="DataModels\video.cs" />
     <Compile Include="Historia.xaml.cs">
       <DependentUpon>Historia.xaml</DependentUpon>
     </Compile>
@@ -138,6 +139,7 @@
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\tripasViewModel.cs" />
     <Compile Include="ViewModels\tripaViewModel.cs" />
+    <Compile Include="ViewModels\videoViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">

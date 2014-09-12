@@ -9,27 +9,34 @@ using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using MyToolkit.Multimedia;
 using MyToolkit.Networking;
+using atripeira.ViewModels;
 
 namespace atripeira
 {
     public partial class Videos : PhoneApplicationPage
     {
+        private videoViewModel TripasViewModel = new videoViewModel();
+
         public Videos()
         {
             InitializeComponent();
-        }
-
-        public async void playYoutube(){
-
-            
-            await YouTube.PlayWithPageDeactivationAsync("LSj4OlGV4x0", true, YouTubeQuality.Quality480P);
-            
-            
+            DataContext = TripasViewModel;
+            TripasViewModel.LoadData();
         }
 
         private void ApplicationBarIconButton_Click(object sender, EventArgs e)
         {
-            playYoutube();
+            
+        }
+
+        private async void LongListSelector_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            var sd = (LongListSelector)sender;
+            var temp = (ItemViewModel)sd.SelectedItem;
+
+            await YouTube.PlayWithPageDeactivationAsync(temp.LineThree, true, YouTubeQuality.Quality480P);
+
+            GC.Collect();
         }
     }
 }
