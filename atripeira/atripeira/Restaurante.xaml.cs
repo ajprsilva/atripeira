@@ -41,6 +41,7 @@ namespace atripeira
 
             rating = soma / numpessoas;
         }
+
         public void addRating(double higiene, double localizacao, double conforto, double atendimento, double qualidadepreco) {
 
             double soma;

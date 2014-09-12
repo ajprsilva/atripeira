@@ -151,7 +151,7 @@
 					</StackPanel>
 					<StackPanel Height="43"  Orientation="Horizontal" Background="#B2FDFDFD">
 						<StackPanel Width="148">
-							<TextBlock TextWrapping="Wrap" Text="Qualidade/Preço: " Height="34"/>
+							<TextBlock TextWrapping="Wrap" Text="Qualidade/Preço: " Height="34" Margin="0,0,-25,0"/>
 						</StackPanel>
                         <StackPanel Width="285">
                         	<toolkit:Rating Width="Auto" Height="40" x:Name="RatingControl5" RatingItemCount="5" Value="2" Margin="79,0,0,0" VerticalAlignment="Bottom" Background="{x:Null}">
