@@ -80,8 +80,9 @@ namespace atripeira
         {
             var sd = (LongListSelector)sender;
             var temp = (ItemViewModel)sd.SelectedItem;
-
-            NavigationService.Navigate(new Uri("/Restaurante.xaml?parameter=" + temp.LineThree, UriKind.Relative));
+            
+            if(temp!=null)
+                NavigationService.Navigate(new Uri("/Restaurante.xaml?parameter=" + temp.LineThree, UriKind.Relative));
         }
 
 

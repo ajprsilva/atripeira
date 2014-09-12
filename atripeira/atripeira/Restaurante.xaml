@@ -7,6 +7,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:es="clr-namespace:Microsoft.Expression.Shapes;assembly=Microsoft.Expression.Drawing"
     xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:maptk="clr-namespace:Microsoft.Phone.Maps.Toolkit;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:maps="clr-namespace:Microsoft.Phone.Maps.Controls;assembly=Microsoft.Phone.Maps"
     x:Class="atripeira.Restaurante"
     mc:Ignorable="d"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
@@ -42,6 +44,23 @@
                             </StackPanel>
                             <toolkit:WrapPanel Height="325">
                                 <StackPanel HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Margin="0,0,-100,-100" Background="#B2EE4D10"/>
+                            </toolkit:WrapPanel>
+                            <toolkit:WrapPanel Height="325">
+                                <StackPanel HorizontalAlignment="Left" Height="190" VerticalAlignment="Top" Width="456" Margin="3,-203,-459,0">
+                                    <maps:Map x:Name="Map" Grid.Row="1" Height="191">
+                                        <maptk:MapExtensions.Children>
+                                            <maptk:Pushpin x:Name="RouteDirectionsPushPin" Visibility="Collapsed"/>
+                                            <maptk:MapItemsControl Name="StoresMapItemsControl">
+                                                <maptk:MapItemsControl.ItemTemplate>
+                                                    <DataTemplate>
+                                                        <maptk:Pushpin GeoCoordinate="{Binding GeoCoordinate}" Visibility="{Binding Visibility}" Content="{Binding Address}"/>
+                                                    </DataTemplate>
+                                                </maptk:MapItemsControl.ItemTemplate>
+                                            </maptk:MapItemsControl>
+                                            <maptk:UserLocationMarker x:Name="UserLocationMarker" Visibility="Collapsed"/>
+                                        </maptk:MapExtensions.Children>
+                                    </maps:Map>
+                                </StackPanel>
                             </toolkit:WrapPanel>
                         </StackPanel>
                     </toolkit:WrapPanel>

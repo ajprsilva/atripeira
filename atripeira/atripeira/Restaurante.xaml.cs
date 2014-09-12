@@ -9,6 +9,10 @@ using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using atripeira.ViewModels;
 using atripeira.DataModels;
+using Microsoft.Phone.Maps.Services;
+using Microsoft.Phone.Maps.Controls;
+using System.Device.Location;
+using Microsoft.Phone.Maps.Toolkit;
 
 namespace atripeira
 {
@@ -36,7 +40,42 @@ namespace atripeira
                 ratingNum.Text = rest.Pontuacao;
 
                 cartaViewModel1.LoadData(Int32.Parse(parameter));
+                mapa("Avenida dos aliados, Porto, Portugal");
             }
+        }
+
+        private async void mapa(string local) {
+            try
+            {
+
+                IEnumerable<MapLocation> mapLocations;
+                MapLocation mapLocation;
+                GeocodeQuery gq = new GeocodeQuery();
+                gq.SearchTerm = local;
+                gq.GeoCoordinate = new GeoCoordinate(0, 0);
+
+                mapLocations = (List<MapLocation>)await gq.GetMapLocationsAsync();
+                mapLocation = mapLocations.FirstOrDefault();
+                gq.QueryAsync();
+
+                if (mapLocation != null)
+                {
+                    LocationRectangle locationRectangle;
+                    Pushpin pushpin = (Pushpin)this.FindName("RouteDirectionsPushPin");
+                    var Latitude = mapLocation.GeoCoordinate.Latitude;
+                    var Longitude = mapLocation.GeoCoordinate.Longitude;
+
+                    locationRectangle = LocationRectangle.CreateBoundingRectangle(mapLocation.GeoCoordinate);
+
+                    this.Map.SetView(locationRectangle, new Thickness(20, 20, 20, 20));
+                    pushpin.GeoCoordinate = new GeoCoordinate(Latitude, Longitude);
+                    pushpin.Visibility = Visibility.Visible;
+                }
+            }
+            catch (Exception ex)
+            {
+
+            } 
         }
 
         public void calcRating(double soma,int numpessoas) {

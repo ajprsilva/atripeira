@@ -37,9 +37,9 @@
          -->
 
         <!--Pivot Control-->
-        <phone:Pivot Title="A Tripeira" HorizontalAlignment="Left" Width="480" Foreground="Black" SelectionChanged="Pivot_SelectionChanged">
+        <phone:Pivot Title="A Tripeira" Foreground="Black" SelectionChanged="Pivot_SelectionChanged">
             <phone:Pivot.Background>
-                <ImageBrush ImageSource="/teste1.png"/>
+                <ImageBrush ImageSource="/teste1.png" Stretch="fill"/>
             </phone:Pivot.Background>
             <!--Pivot item one-->
             <phone:PivotItem Header="As Tripas">
