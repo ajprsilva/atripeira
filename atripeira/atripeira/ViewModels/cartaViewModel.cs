@@ -64,7 +64,7 @@ namespace atripeira.ViewModels
         /// <summary>
         /// Creates and adds a few ItemViewModel objects into the Items collection.
         /// </summary>
-        public async Task<ObservableCollection<carta1ViewModel>> LoadData(string id)
+        public async Task<ObservableCollection<carta1ViewModel>> LoadData(int id)
         {
             try
             {

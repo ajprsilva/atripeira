@@ -51,7 +51,7 @@
 			<!--Pivot item two-->
 			<phone:PivotItem Header="Opinião Cliente" Margin="10,10,14,18">
 				<StackPanel Margin="14,10,10,23" Width="432" HorizontalAlignment="Left" VerticalAlignment="Top">
-					<StackPanel Height="100" Margin="10,0,-23,0" Orientation="Horizontal">
+					<StackPanel Height="100" Orientation="Horizontal">
 						<StackPanel Height="100" Width="81" Background="#B2FFFFFF">
 							<TextBlock Margin="10,10,-15,0" Name="ratingNum" TextWrapping="Wrap" VerticalAlignment="Top" Height="73" Width="73" FontSize="48" Foreground="Black" HorizontalAlignment="Left" Text="4.0"/>
 						</StackPanel>
@@ -180,8 +180,16 @@
 			<!--Pivot item 3-->
 			<phone:PivotItem Header="Carta" Margin="10,38,14,-10">
 				<StackPanel Orientation="Horizontal" Margin="14,10,10,23" Width="432">
-					<StackPanel Width="324"/>
-					<StackPanel Width="107"/>
+					<StackPanel Width="324">
+						<StackPanel Height="60" Background="#B2FFFFFF">
+							<TextBlock TextWrapping="Wrap" Height="60"/>
+						</StackPanel>
+					</StackPanel>
+					<StackPanel Width="107">
+						<StackPanel Height="60" Background="#B2FFFFFF">
+							<TextBlock TextWrapping="Wrap" Height="60"/>
+						</StackPanel>
+					</StackPanel>
 				</StackPanel>
 			</phone:PivotItem>
 		</phone:Pivot>
