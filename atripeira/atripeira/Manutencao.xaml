@@ -1,0 +1,99 @@
+﻿<phone:PhoneApplicationPage
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    x:Class="atripeira.Manutencao"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="Ajuda"/>
+            </shell:ApplicationBar.MenuItems>
+            <shell:ApplicationBarIconButton IconUri="/Assets/View-Small-Icons-01.png" Text="ok" Click="ApplicationBarIconButton_Click"/>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+<!--LayoutRoot is the root grid where all page content is placed-->
+	<Grid x:Name="LayoutRoot" Background="Transparent">
+		<!--Pivot Control-->
+		<phone:Pivot Title="A Tripeira">
+			<!--Pivot item one-->
+			<phone:PivotItem Header="Registar restaurante" Margin="14,10,10,11">
+				<toolkit:WrapPanel HorizontalAlignment="Left" Height="538" VerticalAlignment="Top" Width="456">
+					<StackPanel HorizontalAlignment="Left" Height="113" VerticalAlignment="Top" Width="456" Margin="0,0,-456,-113">
+						<TextBlock TextWrapping="Wrap" Text="Nome do restaurante:" Margin="11,0,0,0"/>
+						<TextBox Height="72" TextWrapping="Wrap" Text="TextBox"/>
+					</StackPanel>
+					<StackPanel HorizontalAlignment="Left" Height="113" VerticalAlignment="Top" Width="456" Margin="0,113,-456,-226">
+						<TextBlock TextWrapping="Wrap" Text="Morada:" Margin="11,0,0,0"/>
+						<TextBox Height="72" TextWrapping="Wrap" Text="TextBox"/>
+					</StackPanel>
+					<StackPanel HorizontalAlignment="Left" Height="113" VerticalAlignment="Top" Width="456" Margin="0,226,-456,-339">
+						<TextBlock TextWrapping="Wrap" Text="Capacidade:" Margin="11,0,0,0"/>
+						<TextBox Height="72" TextWrapping="Wrap" Text="TextBox"/>
+					</StackPanel>
+					<StackPanel HorizontalAlignment="Left" Height="113" VerticalAlignment="Top" Width="456" Margin="0,339,-456,-452">
+						<TextBlock TextWrapping="Wrap" Text="Breve descriçao:" Margin="11,0,0,0"/>
+						<TextBox Height="72" TextWrapping="Wrap" Text="TextBox"/>
+					</StackPanel>
+					<StackPanel HorizontalAlignment="Left" Height="113" VerticalAlignment="Top" Width="456" Margin="0,452,-456,-565">
+						<TextBlock TextWrapping="Wrap" Text="Contacto:" Margin="11,0,0,0"/>
+						<TextBox Height="72" TextWrapping="Wrap" Text="TextBox"/>
+					</StackPanel>
+				</toolkit:WrapPanel>
+			</phone:PivotItem>
+
+			<!--Pivot item two-->
+			<phone:PivotItem Header="Manutençao">
+                <Grid>
+                    <toolkit:WrapPanel HorizontalAlignment="Left" Height="426" VerticalAlignment="Top" Width="446">
+                        <StackPanel Margin="36,10,-406,-268" Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Left" Width="370">
+                            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
+                                <Border Background="#B2EE4D10" Height="173" Width="173" Margin="12,0,0,0" Tap="TextBlock_Tap" >
+                                    <toolkit:WrapPanel>
+                                        <TextBlock FontSize="21.333" Foreground="White" Margin="6,143,-124,-173">
+                    						<Run Text="Tripas"/>
+                                        </TextBlock>
+                                    </toolkit:WrapPanel>
+                                </Border>
+                                <Border Background="#B2EE4D10" Height="173" Width="173" Margin="12,0,0,0" Tap="TextBlock_Tap_1">
+                                    <toolkit:WrapPanel>
+                                        <TextBlock FontSize="21.333" Foreground="White" Margin="6,143,-91,-173">
+                    						<Run Text="Fotos"/>
+                                        </TextBlock>
+                                    </toolkit:WrapPanel>
+                                </Border>
+                            </StackPanel>
+                            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Margin="0,12,0,0">
+                                <Border Background="#B2EE4D10" Height="173" Width="173" Margin="12,0,0,0" Tap="TextBlock_Tap_2">
+                                    <toolkit:WrapPanel>
+                                        <TextBlock FontSize="21.333" Foreground="White" Margin="6,144,-128,-166">
+                    						<Run Text="Perfil"/>
+                                        </TextBlock>
+                                    </toolkit:WrapPanel>
+                                </Border>
+                                <Border Background="#B2EE4D10" Height="173" Width="173" Margin="12,0,0,0" Tap="TextBlock_Tap_3">
+                                    <toolkit:WrapPanel>
+                                        <TextBlock FontSize="21.333" Foreground="White" Margin="6,144,-128,-166">
+                    						<Run Text="Carta"/>
+                                        </TextBlock>
+                                    </toolkit:WrapPanel>
+                                </Border>
+                            </StackPanel>
+
+                        </StackPanel>
+                    </toolkit:WrapPanel>
+                </Grid>
+            </phone:PivotItem>
+		</phone:Pivot>
+	</Grid>
+</phone:PhoneApplicationPage>
