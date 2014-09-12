@@ -70,6 +70,12 @@ namespace atripeira
                     break;
             }
         }
+
+        private void ApplicationBarIconButton_Click(object sender, EventArgs e)
+        {
+
+            MessageBox.Show("Comentário inserido com sucesso!");
+        }
     }
 
     

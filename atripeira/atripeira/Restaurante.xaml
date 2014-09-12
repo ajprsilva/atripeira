@@ -213,7 +213,7 @@
         </shell:ApplicationBar>
 
         <shell:ApplicationBar x:Key="resta2" IsVisible="True" IsMenuEnabled="True">
-            <shell:ApplicationBarIconButton IconUri="/Assets/Add-New.png" Text="Adicionar"/>
+            <shell:ApplicationBarIconButton IconUri="/Assets/Add-New.png" Text="Adicionar" Click="ApplicationBarIconButton_Click"/>
             <shell:ApplicationBar.MenuItems>
                 <shell:ApplicationBarMenuItem Text="Área Reservada"/>
                 <shell:ApplicationBarMenuItem Text="Ajuda"/>
