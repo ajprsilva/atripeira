@@ -34,7 +34,6 @@ namespace atripeira
                 App.ViewModel.LoadData();
             }
         }
-
         
 
         private void TextBlock_Tap(object sender, System.Windows.Input.GestureEventArgs e)
@@ -64,9 +63,25 @@ namespace atripeira
 
         private void LongListSelector_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            var temp = (ItemViewModel)lst.SelectedItem;
+            var sd = (LongListSelector)sender;
+            var temp = (ItemViewModel)sd.SelectedItem;
             
             NavigationService.Navigate(new Uri("/Restaurante.xaml?parameter="+temp.LineThree, UriKind.Relative));
+        }
+
+        private void Pivot_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            switch ((sender as Pivot).SelectedIndex)
+            {
+                case 0:
+                    this.ApplicationBar = this.Resources["resta2"] as ApplicationBar;
+                    break;
+                case 1:
+                    this.ApplicationBar = this.Resources["resta"] as ApplicationBar;
+                    break;
+                default:
+                    break;
+            }
         }
 
 

@@ -16,192 +16,220 @@
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-	<Grid x:Name="LayoutRoot" Background="Transparent">
-		<!--Pivot Control-->
-		<phone:Pivot Title="A Tripeira" Foreground="Black">
-			<phone:Pivot.Background>
-				<ImageBrush ImageSource="desenho01-15.jpg"/>
-			</phone:Pivot.Background>
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <!--Pivot Control-->
+        <phone:Pivot Title="A Tripeira" Foreground="Black" SelectionChanged="Pivot_SelectionChanged">
+            <phone:Pivot.Background>
+                <ImageBrush ImageSource="desenho01-15.jpg"/>
+            </phone:Pivot.Background>
 
-			<!--Pivot item one-->
-			<phone:PivotItem Header="Restaurante" Background="Transparent" Foreground="Black">
-				<Grid HorizontalAlignment="Left" Height="531" VerticalAlignment="Top" Width="456">
-					<toolkit:WrapPanel HorizontalAlignment="Left" Height="531" VerticalAlignment="Top" Width="456" Background="Transparent">
-						<StackPanel HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Margin="0,0,-100,-100" Background="#B2EE4D10"/>
-						<StackPanel HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="356" Margin="100,0,-456,-100" Background="#B2FFFFFF">
-							<StackPanel Height="50">
-                                <TextBlock TextWrapping="Wrap" Name="txtNome" Text="Nome" Height="100"/>
+            <!--Pivot item one-->
+            <phone:PivotItem Header="Restaurante" Background="Transparent" Foreground="Black">
+                <Grid HorizontalAlignment="Left" Height="531" VerticalAlignment="Top" Width="456">
+                    <toolkit:WrapPanel HorizontalAlignment="Left" Height="531" VerticalAlignment="Top" Width="456" Background="Transparent">
+                        <StackPanel HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Margin="0,0,-100,-100" Background="#B2EE4D10"/>
+                        <StackPanel HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="356" Margin="100,0,-456,-100" Background="#B2FFFFFF">
+                            <StackPanel Height="50">
+                                <TextBlock TextWrapping="Wrap" Name="txtNome" Text="" Height="100"/>
                             </StackPanel>
                             <StackPanel Height="50">
-                                <TextBlock TextWrapping="Wrap" Name="txtMorada" Text="Morada" Height="100"/>
+                                <TextBlock TextWrapping="Wrap" Name="txtMorada" Text="" Height="100"/>
                             </StackPanel>
                         </StackPanel>
-						<StackPanel HorizontalAlignment="Left" Height="426" VerticalAlignment="Top" Width="456" Margin="0,105,-456,-531">
-							<StackPanel Height="100" Background="#B2FFFFFF">
-								<TextBlock TextWrapping="Wrap" Text="Texto de introdução" Height="100"/>
-							</StackPanel>
-							<toolkit:WrapPanel Height="325">
-								<StackPanel HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Margin="0,0,-100,-100" Background="#B2EE4D10"/>
-							</toolkit:WrapPanel>
-						</StackPanel>
-					</toolkit:WrapPanel>
-				</Grid>
-			</phone:PivotItem>
+                        <StackPanel HorizontalAlignment="Left" Height="426" VerticalAlignment="Top" Width="456" Margin="0,105,-456,-531">
+                            <StackPanel Height="100" Background="#B2FFFFFF">
+                                <TextBlock TextWrapping="Wrap" Text="Texto de introdução" Height="100"/>
+                            </StackPanel>
+                            <toolkit:WrapPanel Height="325">
+                                <StackPanel HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Margin="0,0,-100,-100" Background="#B2EE4D10"/>
+                            </toolkit:WrapPanel>
+                        </StackPanel>
+                    </toolkit:WrapPanel>
+                </Grid>
+            </phone:PivotItem>
 
-			<!--Pivot item two-->
-			<phone:PivotItem Header="Opinião Cliente" Margin="10,10,14,18">
-				<StackPanel Margin="14,10,10,23" Width="432" HorizontalAlignment="Left" VerticalAlignment="Top">
-					<StackPanel Height="100" Orientation="Horizontal">
-						<StackPanel Height="100" Width="81" Background="#B2FFFFFF">
-							<TextBlock Margin="10,10,-15,0" Name="ratingNum" TextWrapping="Wrap" VerticalAlignment="Top" Height="73" Width="73" FontSize="48" Foreground="Black" HorizontalAlignment="Left" Text="4.0"/>
-						</StackPanel>
-						<StackPanel Height="100" Width="344" Background="#B2FFFFFF">
-							<toolkit:Rating Width="Auto" Height="64" x:Name="RatingControl6" RatingItemCount="5" Value="2" Margin="58,0,0,0" VerticalAlignment="Bottom" Background="{x:Null}" ReadOnly="True">
-								<toolkit:Rating.FilledItemStyle>
-									<Style TargetType="toolkit:RatingItem">
+            <!--Pivot item two-->
+            <phone:PivotItem Header="Opinião Cliente" Margin="10,10,14,18">
+                <StackPanel Margin="14,10,10,23" Width="432" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <StackPanel Height="100" Orientation="Horizontal">
+                        <StackPanel Height="100" Width="81" Background="#B2FFFFFF">
+                            <TextBlock Margin="10,10,-15,0" Name="ratingNum" TextWrapping="Wrap" VerticalAlignment="Top" Height="73" Width="73" FontSize="48" Foreground="Black" HorizontalAlignment="Left" Text="4.0"/>
+                        </StackPanel>
+                        <StackPanel Height="100" Width="344" Background="#B2FFFFFF">
+                            <toolkit:Rating Width="Auto" Height="64" x:Name="RatingControl6" RatingItemCount="5" Value="2" Margin="58,0,0,0" VerticalAlignment="Bottom" Background="{x:Null}" ReadOnly="True">
+                                <toolkit:Rating.FilledItemStyle>
+                                    <Style TargetType="toolkit:RatingItem">
                                         <Setter Property="Background" Value="Orange" />
-									</Style>
-								</toolkit:Rating.FilledItemStyle>
-								<toolkit:Rating.UnfilledItemStyle>
-									<Style TargetType="toolkit:RatingItem">
-										<Setter Property="Background" Value="OrangeRed" />
-									</Style>
-								</toolkit:Rating.UnfilledItemStyle>
-							</toolkit:Rating>
-						</StackPanel>
-					</StackPanel>
-					<StackPanel Height="45" Margin="0,0,10,0" Background="#B2FFFDFD">
-						<TextBlock TextWrapping="Wrap" Text="Categorias:"/>
-					</StackPanel>
-					<StackPanel Height="43" Orientation="Horizontal" Background="#B2FFFFFF">
-						<StackPanel Width="148">
-							<TextBlock TextWrapping="Wrap" Text="Atendimento: " Height="34"/>
-						</StackPanel>
-                        <StackPanel Width="285">
-                        	<toolkit:Rating Width="Auto" Height="40" x:Name="RatingControl" RatingItemCount="5" Value="2" Margin="79,0,0,0" VerticalAlignment="Bottom" Background="{x:Null}">
-                        		<toolkit:Rating.FilledItemStyle>
-                        			<Style TargetType="toolkit:RatingItem">
-                        				<Setter Property="Background" Value="Orange" />
-                        			</Style>
-                        		</toolkit:Rating.FilledItemStyle>
-                        		<toolkit:Rating.UnfilledItemStyle>
-                        			<Style TargetType="toolkit:RatingItem">
-                        				<Setter Property="Background" Value="OrangeRed" />
-                        			</Style>
-                        		</toolkit:Rating.UnfilledItemStyle>
-                        	</toolkit:Rating>
+                                    </Style>
+                                </toolkit:Rating.FilledItemStyle>
+                                <toolkit:Rating.UnfilledItemStyle>
+                                    <Style TargetType="toolkit:RatingItem">
+                                        <Setter Property="Background" Value="OrangeRed" />
+                                    </Style>
+                                </toolkit:Rating.UnfilledItemStyle>
+                            </toolkit:Rating>
                         </StackPanel>
                     </StackPanel>
-					<StackPanel Height="43" Orientation="Horizontal" Background="#B2FFFFFF">
-						<StackPanel Width="148">
-							<TextBlock TextWrapping="Wrap" Text="Conforto: " Height="34"/>
-						</StackPanel>
-                        <StackPanel Width="285">
-                        	<toolkit:Rating Width="Auto" Height="40" x:Name="RatingControl2" RatingItemCount="5" Value="2" Margin="79,0,0,0" VerticalAlignment="Bottom" Background="{x:Null}">
-                        		<toolkit:Rating.FilledItemStyle>
-                        			<Style TargetType="toolkit:RatingItem">
-                                        <Setter Property="Background" Value="Orange" />
-                        			</Style>
-                        		</toolkit:Rating.FilledItemStyle>
-                        		<toolkit:Rating.UnfilledItemStyle>
-                        			<Style TargetType="toolkit:RatingItem">
-                                        <Setter Property="Background" Value="OrangeRed" />
-                        			</Style>
-                        		</toolkit:Rating.UnfilledItemStyle>
-                        	</toolkit:Rating>
-                        </StackPanel>
-					</StackPanel>
-					<StackPanel Height="43" Orientation="Horizontal" Background="#B2FFFFFF">
+                    <StackPanel Height="45" Margin="0,0,10,0" Background="#B2FFFDFD">
+                        <TextBlock TextWrapping="Wrap" Text="Categorias:"/>
+                    </StackPanel>
+                    <StackPanel Height="43" Orientation="Horizontal" Background="#B2FFFFFF">
                         <StackPanel Width="148">
-							<TextBlock TextWrapping="Wrap" Text="Localização: " Height="34"/>
-						</StackPanel>
-						<StackPanel Width="285">
-							<toolkit:Rating Width="Auto" Height="40" x:Name="RatingControl3" RatingItemCount="5" Value="2" Margin="79,0,0,0" VerticalAlignment="Bottom" Background="{x:Null}">
-								<toolkit:Rating.FilledItemStyle>
-									<Style TargetType="toolkit:RatingItem">
-                                        <Setter Property="Background" Value="Orange" />
-									</Style>
-								</toolkit:Rating.FilledItemStyle>
-								<toolkit:Rating.UnfilledItemStyle>
-									<Style TargetType="toolkit:RatingItem">
-                                        <Setter Property="Background" Value="OrangeRed" />
-									</Style>
-								</toolkit:Rating.UnfilledItemStyle>
-							</toolkit:Rating>
-						</StackPanel>
-					</StackPanel>
-					<StackPanel Height="43" Orientation="Horizontal" Background="#B2FFFFFF">
-						<StackPanel Width="148">
-							<TextBlock TextWrapping="Wrap" Text="Higiene: " Height="34"/>
-						</StackPanel>
-                        <StackPanel Width="285">
-                        	<toolkit:Rating Width="Auto" Height="40" x:Name="RatingControl4" RatingItemCount="5" Value="2" Margin="79,0,0,0" VerticalAlignment="Bottom" Background="{x:Null}">
-                        		<toolkit:Rating.FilledItemStyle>
-                        			<Style TargetType="toolkit:RatingItem">
-                                        <Setter Property="Background" Value="Orange" />
-                        			</Style>
-                        		</toolkit:Rating.FilledItemStyle>
-                        		<toolkit:Rating.UnfilledItemStyle>
-                        			<Style TargetType="toolkit:RatingItem">
-                                        <Setter Property="Background" Value="OrangeRed" />
-                        			</Style>
-                        		</toolkit:Rating.UnfilledItemStyle>
-                        	</toolkit:Rating>
+                            <TextBlock TextWrapping="Wrap" Text="Atendimento: " Height="34"/>
                         </StackPanel>
-					</StackPanel>
-					<StackPanel Height="43"  Orientation="Horizontal" Background="#B2FDFDFD">
-						<StackPanel Width="148">
-							<TextBlock TextWrapping="Wrap" Text="Qualidade/Preço: " Height="34" Margin="0,0,-25,0"/>
-						</StackPanel>
                         <StackPanel Width="285">
-                        	<toolkit:Rating Width="Auto" Height="40" x:Name="RatingControl5" RatingItemCount="5" Value="2" Margin="79,0,0,0" VerticalAlignment="Bottom" Background="{x:Null}">
-                        		<toolkit:Rating.FilledItemStyle>
-                        			<Style TargetType="toolkit:RatingItem">
+                            <toolkit:Rating Width="Auto" Height="40" x:Name="RatingControl" RatingItemCount="5" Value="2" Margin="79,0,0,0" VerticalAlignment="Bottom" Background="{x:Null}">
+                                <toolkit:Rating.FilledItemStyle>
+                                    <Style TargetType="toolkit:RatingItem">
                                         <Setter Property="Background" Value="Orange" />
-                        			</Style>
-                        		</toolkit:Rating.FilledItemStyle>
-                        		<toolkit:Rating.UnfilledItemStyle>
-                        			<Style TargetType="toolkit:RatingItem">
+                                    </Style>
+                                </toolkit:Rating.FilledItemStyle>
+                                <toolkit:Rating.UnfilledItemStyle>
+                                    <Style TargetType="toolkit:RatingItem">
                                         <Setter Property="Background" Value="OrangeRed" />
-                        			</Style>
-                        		</toolkit:Rating.UnfilledItemStyle>
-                        	</toolkit:Rating>
+                                    </Style>
+                                </toolkit:Rating.UnfilledItemStyle>
+                            </toolkit:Rating>
                         </StackPanel>
-					</StackPanel>
-					<StackPanel Height="78" Background="#B2FFFFFF">
-						<TextBlock TextWrapping="Wrap" Text="Comentários:"/>
-					</StackPanel>
-					<StackPanel Height="97">
-						<TextBox Height="72" TextWrapping="Wrap" Text="Comentário"/>
-					</StackPanel>
-				</StackPanel>
-			</phone:PivotItem>
+                    </StackPanel>
+                    <StackPanel Height="43" Orientation="Horizontal" Background="#B2FFFFFF">
+                        <StackPanel Width="148">
+                            <TextBlock TextWrapping="Wrap" Text="Conforto: " Height="34"/>
+                        </StackPanel>
+                        <StackPanel Width="285">
+                            <toolkit:Rating Width="Auto" Height="40" x:Name="RatingControl2" RatingItemCount="5" Value="2" Margin="79,0,0,0" VerticalAlignment="Bottom" Background="{x:Null}">
+                                <toolkit:Rating.FilledItemStyle>
+                                    <Style TargetType="toolkit:RatingItem">
+                                        <Setter Property="Background" Value="Orange" />
+                                    </Style>
+                                </toolkit:Rating.FilledItemStyle>
+                                <toolkit:Rating.UnfilledItemStyle>
+                                    <Style TargetType="toolkit:RatingItem">
+                                        <Setter Property="Background" Value="OrangeRed" />
+                                    </Style>
+                                </toolkit:Rating.UnfilledItemStyle>
+                            </toolkit:Rating>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel Height="43" Orientation="Horizontal" Background="#B2FFFFFF">
+                        <StackPanel Width="148">
+                            <TextBlock TextWrapping="Wrap" Text="Localização: " Height="34"/>
+                        </StackPanel>
+                        <StackPanel Width="285">
+                            <toolkit:Rating Width="Auto" Height="40" x:Name="RatingControl3" RatingItemCount="5" Value="2" Margin="79,0,0,0" VerticalAlignment="Bottom" Background="{x:Null}">
+                                <toolkit:Rating.FilledItemStyle>
+                                    <Style TargetType="toolkit:RatingItem">
+                                        <Setter Property="Background" Value="Orange" />
+                                    </Style>
+                                </toolkit:Rating.FilledItemStyle>
+                                <toolkit:Rating.UnfilledItemStyle>
+                                    <Style TargetType="toolkit:RatingItem">
+                                        <Setter Property="Background" Value="OrangeRed" />
+                                    </Style>
+                                </toolkit:Rating.UnfilledItemStyle>
+                            </toolkit:Rating>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel Height="43" Orientation="Horizontal" Background="#B2FFFFFF">
+                        <StackPanel Width="148">
+                            <TextBlock TextWrapping="Wrap" Text="Higiene: " Height="34"/>
+                        </StackPanel>
+                        <StackPanel Width="285">
+                            <toolkit:Rating Width="Auto" Height="40" x:Name="RatingControl4" RatingItemCount="5" Value="2" Margin="79,0,0,0" VerticalAlignment="Bottom" Background="{x:Null}">
+                                <toolkit:Rating.FilledItemStyle>
+                                    <Style TargetType="toolkit:RatingItem">
+                                        <Setter Property="Background" Value="Orange" />
+                                    </Style>
+                                </toolkit:Rating.FilledItemStyle>
+                                <toolkit:Rating.UnfilledItemStyle>
+                                    <Style TargetType="toolkit:RatingItem">
+                                        <Setter Property="Background" Value="OrangeRed" />
+                                    </Style>
+                                </toolkit:Rating.UnfilledItemStyle>
+                            </toolkit:Rating>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel Height="43"  Orientation="Horizontal" Background="#B2FDFDFD">
+                        <StackPanel Width="148">
+                            <TextBlock TextWrapping="Wrap" Text="Qualidade/Preço: " Height="34" Margin="0,0,-25,0"/>
+                        </StackPanel>
+                        <StackPanel Width="285">
+                            <toolkit:Rating Width="Auto" Height="40" x:Name="RatingControl5" RatingItemCount="5" Value="2" Margin="79,0,0,0" VerticalAlignment="Bottom" Background="{x:Null}">
+                                <toolkit:Rating.FilledItemStyle>
+                                    <Style TargetType="toolkit:RatingItem">
+                                        <Setter Property="Background" Value="Orange" />
+                                    </Style>
+                                </toolkit:Rating.FilledItemStyle>
+                                <toolkit:Rating.UnfilledItemStyle>
+                                    <Style TargetType="toolkit:RatingItem">
+                                        <Setter Property="Background" Value="OrangeRed" />
+                                    </Style>
+                                </toolkit:Rating.UnfilledItemStyle>
+                            </toolkit:Rating>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel Height="78" Background="#B2FFFFFF">
+                        <TextBlock TextWrapping="Wrap" Text="Comentários:"/>
+                    </StackPanel>
+                    <StackPanel Height="97">
+                        <TextBox Height="72" TextWrapping="Wrap" Text="Comentário"/>
+                    </StackPanel>
+                </StackPanel>
+            </phone:PivotItem>
 
-			<!--Pivot item 3-->
-			<phone:PivotItem Header="Carta" Margin="10,38,14,-10">
-				<StackPanel Orientation="Horizontal" Margin="14,10,10,23" Width="432">
-					<StackPanel Width="324">
-						<StackPanel Height="60" Background="#B2FFFFFF">
-							<TextBlock TextWrapping="Wrap" Height="60"/>
-						</StackPanel>
-					</StackPanel>
-					<StackPanel Width="107">
-						<StackPanel Height="60" Background="#B2FFFFFF">
-							<TextBlock TextWrapping="Wrap" Height="60"/>
-						</StackPanel>
-					</StackPanel>
-				</StackPanel>
-			</phone:PivotItem>
-		</phone:Pivot>
-	</Grid>
-    <phone:PhoneApplicationPage.ApplicationBar>
-        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
-            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
-            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
+            <!--Pivot item 3-->
+            <phone:PivotItem Header="Carta" Margin="10,38,14,-10">
+                <StackPanel Orientation="Horizontal" Margin="14,10,10,23" Width="432">
+                    <StackPanel Width="324">
+                        <StackPanel Height="60" Background="#B2FFFFFF">
+                            <phone:LongListSelector ItemsSource="{Binding Items}">
+                                <phone:LongListSelector.ItemTemplate>
+                                    <DataTemplate>
+                                        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="587" Width="436"  Text="{Binding Nome}" Foreground="Black"/>
+                                    </DataTemplate>
+                                </phone:LongListSelector.ItemTemplate>
+                            </phone:LongListSelector>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel Width="107">
+                        <StackPanel Height="60">
+                            <phone:LongListSelector ItemsSource="{Binding Items}">
+                                <phone:LongListSelector.ItemTemplate>
+                                    <DataTemplate>
+                                        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="587" Width="436"  Text="{Binding Preco}" Foreground="Black"/>
+                                    </DataTemplate>
+                                </phone:LongListSelector.ItemTemplate>
+                            </phone:LongListSelector>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+            </phone:PivotItem>
+        </phone:Pivot>
+    </Grid>
+
+    <phone:PhoneApplicationPage.Resources>
+        <shell:ApplicationBar x:Key="resta" IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Assets/View-Small-Icons-01.png" Text="Reserva"/>
             <shell:ApplicationBar.MenuItems>
-                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
-                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
+                <shell:ApplicationBarMenuItem Text="Área Reservada"/>
+                <shell:ApplicationBarMenuItem Text="Ajuda"/>
             </shell:ApplicationBar.MenuItems>
         </shell:ApplicationBar>
-    </phone:PhoneApplicationPage.ApplicationBar>
+
+        <shell:ApplicationBar x:Key="resta2" IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Assets/Add-New.png" Text="Adicionar"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="Área Reservada"/>
+                <shell:ApplicationBarMenuItem Text="Ajuda"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+
+        <shell:ApplicationBar x:Key="resta3" IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="Área Reservada"/>
+                <shell:ApplicationBarMenuItem Text="Ajuda"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.Resources>
+
 </phone:PhoneApplicationPage>

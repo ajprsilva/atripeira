@@ -15,10 +15,12 @@ namespace atripeira
     public partial class Restaurante : PhoneApplicationPage
     {
         private MainViewModel ViewModel1 = new MainViewModel();
+        private cartaViewModel cartaViewModel1 = new cartaViewModel();
 
         public Restaurante()
         {
             InitializeComponent();
+            DataContext = cartaViewModel1;
         }
 
         protected override async void OnNavigatedTo(NavigationEventArgs e)
@@ -32,6 +34,8 @@ namespace atripeira
                 txtMorada.Text = rest.morada;
                 RatingControl6.Value = Double.Parse(rest.Pontuacao);
                 ratingNum.Text = rest.Pontuacao;
+
+                cartaViewModel1.LoadData(Int32.Parse(parameter));
             }
         }
 
@@ -47,6 +51,24 @@ namespace atripeira
             double soma;
             soma = (higiene + localizacao + conforto + atendimento + qualidadepreco)/5;
             //adicionar soma a bd
+        }
+
+        private void Pivot_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            switch ((sender as Pivot).SelectedIndex)
+            {
+                case 0:
+                    this.ApplicationBar = this.Resources["resta"] as ApplicationBar;
+                    break;
+                case 1:
+                    this.ApplicationBar = this.Resources["resta2"] as ApplicationBar;
+                    break;
+                case 2:
+                    this.ApplicationBar = this.Resources["resta3"] as ApplicationBar;
+                    break;
+                default:
+                    break;
+            }
         }
     }
 

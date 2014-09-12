@@ -64,11 +64,11 @@ namespace atripeira.ViewModels
         /// <summary>
         /// Creates and adds a few ItemViewModel objects into the Items collection.
         /// </summary>
-        public async Task<ObservableCollection<carta1ViewModel>> LoadData(int id)
+        public async void LoadData(int id)
         {
             try
             {
-                items = await todoTable.Where(todoItem => todoItem.idRest == id).ToCollectionAsync();
+                items = await todoTable.CreateQuery().ToCollectionAsync();
             }
             catch (Exception ex) {
                 string st = ex.Message.ToString();
@@ -76,12 +76,13 @@ namespace atripeira.ViewModels
             
             foreach(carta cat in items){
                  // Sample data; replace with real data
-                this.Items.Add(new carta1ViewModel() { iD=cat.Id, Nome=cat.nome, Descricao=cat.descricao, Preco=cat.preco, idRest=cat.idRest});
+                if (cat.idRest==id)
+                    this.Items.Add(new carta1ViewModel() { iD=cat.Id, Nome=cat.nome, Descricao=cat.descricao, Preco=cat.preco, idRest=cat.idRest});
             }
            
             this.IsDataLoaded = true;
 
-            return this.Items;
+            
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

@@ -38,7 +38,7 @@
          -->
 
         <!--Pivot Control-->
-        <phone:Pivot Title="A Tripeira" HorizontalAlignment="Left" Width="480" Foreground="Black">
+        <phone:Pivot Title="A Tripeira" HorizontalAlignment="Left" Width="480" Foreground="Black" SelectionChanged="Pivot_SelectionChanged">
             <phone:Pivot.Background>
                 <ImageBrush ImageSource="/teste1.png"/>
             </phone:Pivot.Background>
@@ -73,14 +73,14 @@
                                     </toolkit:WrapPanel>
                                 </Border>
                                 <Border Background="#B2EE4D10" Height="173" Width="173" Margin="12,0,0,0" Tap="TextBlock_Tap_3">
-                                        <toolkit:WrapPanel>
-                                            <TextBlock FontSize="21.333" Foreground="White" Margin="6,144,-128,-166">
+                                    <toolkit:WrapPanel>
+                                        <TextBlock FontSize="21.333" Foreground="White" Margin="6,144,-128,-166">
                     						<Run Text="Videos"/>
-                                            </TextBlock>
-                                        </toolkit:WrapPanel>
-                                    </Border>
+                                        </TextBlock>
+                                    </toolkit:WrapPanel>
+                                </Border>
                             </StackPanel>
-                            
+
                         </StackPanel>
                     </toolkit:WrapPanel>
                 </Grid>
@@ -129,7 +129,7 @@
                 </phone:LongListSelector>
             </phone:PivotItem>
 
-            
+
         </phone:Pivot>
 
 
@@ -143,15 +143,22 @@
         <!--<Image Source="/Assets/AlignmentGrid.png" VerticalAlignment="Top" Height="800" Width="480" Margin="0,-32,0,0" Grid.Row="0" IsHitTestVisible="False" />-->
     </Grid>
 
-    <phone:PhoneApplicationPage.ApplicationBar>
-        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
-            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Todos"/>
-            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Pesquisa"/>
-            <shell:ApplicationBar.MenuItems>
-                <shell:ApplicationBarMenuItem Text="Login"/>
-                <shell:ApplicationBarMenuItem Text="Ajuda"/>
-            </shell:ApplicationBar.MenuItems>
-        </shell:ApplicationBar>
-    </phone:PhoneApplicationPage.ApplicationBar>
+    <phone:PhoneApplicationPage.Resources>
 
+        <shell:ApplicationBar x:Key="resta" IsVisible="True" IsMenuEnabled="True">
+                <shell:ApplicationBarIconButton IconUri="/Assets/View-Small-Icons-01.png" Text="Todos"/>
+                <shell:ApplicationBarIconButton IconUri="/Assets/Search-Find.png" Text="Pesquisa"/>
+                <shell:ApplicationBar.MenuItems>
+                    <shell:ApplicationBarMenuItem Text="Área Reservada"/>
+                    <shell:ApplicationBarMenuItem Text="Ajuda"/>
+                </shell:ApplicationBar.MenuItems>
+            </shell:ApplicationBar>
+
+        <shell:ApplicationBar x:Key="resta2" IsVisible="True" IsMenuEnabled="True">
+                <shell:ApplicationBar.MenuItems>
+                    <shell:ApplicationBarMenuItem Text="Área Reservada"/>
+                    <shell:ApplicationBarMenuItem Text="Ajuda"/>
+                </shell:ApplicationBar.MenuItems>
+            </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.Resources>
 </phone:PhoneApplicationPage>
