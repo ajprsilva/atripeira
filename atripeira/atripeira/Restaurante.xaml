@@ -59,12 +59,12 @@
 							<toolkit:Rating Width="Auto" Height="64" x:Name="RatingControl6" RatingItemCount="5" Value="2" Margin="58,0,0,0" VerticalAlignment="Bottom" Background="{x:Null}" ReadOnly="True">
 								<toolkit:Rating.FilledItemStyle>
 									<Style TargetType="toolkit:RatingItem">
-										<Setter Property="Background" Value="Red" />
+                                        <Setter Property="Background" Value="Orange" />
 									</Style>
 								</toolkit:Rating.FilledItemStyle>
 								<toolkit:Rating.UnfilledItemStyle>
 									<Style TargetType="toolkit:RatingItem">
-										<Setter Property="Background" Value="DarkRed" />
+										<Setter Property="Background" Value="OrangeRed" />
 									</Style>
 								</toolkit:Rating.UnfilledItemStyle>
 							</toolkit:Rating>
@@ -81,12 +81,12 @@
                         	<toolkit:Rating Width="Auto" Height="40" x:Name="RatingControl" RatingItemCount="5" Value="2" Margin="79,0,0,0" VerticalAlignment="Bottom" Background="{x:Null}">
                         		<toolkit:Rating.FilledItemStyle>
                         			<Style TargetType="toolkit:RatingItem">
-                        				<Setter Property="Background" Value="Red" />
+                        				<Setter Property="Background" Value="Orange" />
                         			</Style>
                         		</toolkit:Rating.FilledItemStyle>
                         		<toolkit:Rating.UnfilledItemStyle>
                         			<Style TargetType="toolkit:RatingItem">
-                        				<Setter Property="Background" Value="DarkRed" />
+                        				<Setter Property="Background" Value="OrangeRed" />
                         			</Style>
                         		</toolkit:Rating.UnfilledItemStyle>
                         	</toolkit:Rating>
@@ -100,12 +100,12 @@
                         	<toolkit:Rating Width="Auto" Height="40" x:Name="RatingControl2" RatingItemCount="5" Value="2" Margin="79,0,0,0" VerticalAlignment="Bottom" Background="{x:Null}">
                         		<toolkit:Rating.FilledItemStyle>
                         			<Style TargetType="toolkit:RatingItem">
-                        				<Setter Property="Background" Value="Red" />
+                                        <Setter Property="Background" Value="Orange" />
                         			</Style>
                         		</toolkit:Rating.FilledItemStyle>
                         		<toolkit:Rating.UnfilledItemStyle>
                         			<Style TargetType="toolkit:RatingItem">
-                        				<Setter Property="Background" Value="DarkRed" />
+                                        <Setter Property="Background" Value="OrangeRed" />
                         			</Style>
                         		</toolkit:Rating.UnfilledItemStyle>
                         	</toolkit:Rating>
@@ -119,12 +119,12 @@
 							<toolkit:Rating Width="Auto" Height="40" x:Name="RatingControl3" RatingItemCount="5" Value="2" Margin="79,0,0,0" VerticalAlignment="Bottom" Background="{x:Null}">
 								<toolkit:Rating.FilledItemStyle>
 									<Style TargetType="toolkit:RatingItem">
-										<Setter Property="Background" Value="Red" />
+                                        <Setter Property="Background" Value="Orange" />
 									</Style>
 								</toolkit:Rating.FilledItemStyle>
 								<toolkit:Rating.UnfilledItemStyle>
 									<Style TargetType="toolkit:RatingItem">
-										<Setter Property="Background" Value="DarkRed" />
+                                        <Setter Property="Background" Value="OrangeRed" />
 									</Style>
 								</toolkit:Rating.UnfilledItemStyle>
 							</toolkit:Rating>
@@ -138,12 +138,12 @@
                         	<toolkit:Rating Width="Auto" Height="40" x:Name="RatingControl4" RatingItemCount="5" Value="2" Margin="79,0,0,0" VerticalAlignment="Bottom" Background="{x:Null}">
                         		<toolkit:Rating.FilledItemStyle>
                         			<Style TargetType="toolkit:RatingItem">
-                        				<Setter Property="Background" Value="Red" />
+                                        <Setter Property="Background" Value="Orange" />
                         			</Style>
                         		</toolkit:Rating.FilledItemStyle>
                         		<toolkit:Rating.UnfilledItemStyle>
                         			<Style TargetType="toolkit:RatingItem">
-                        				<Setter Property="Background" Value="DarkRed" />
+                                        <Setter Property="Background" Value="OrangeRed" />
                         			</Style>
                         		</toolkit:Rating.UnfilledItemStyle>
                         	</toolkit:Rating>
@@ -157,12 +157,12 @@
                         	<toolkit:Rating Width="Auto" Height="40" x:Name="RatingControl5" RatingItemCount="5" Value="2" Margin="79,0,0,0" VerticalAlignment="Bottom" Background="{x:Null}">
                         		<toolkit:Rating.FilledItemStyle>
                         			<Style TargetType="toolkit:RatingItem">
-                        				<Setter Property="Background" Value="Red" />
+                                        <Setter Property="Background" Value="Orange" />
                         			</Style>
                         		</toolkit:Rating.FilledItemStyle>
                         		<toolkit:Rating.UnfilledItemStyle>
                         			<Style TargetType="toolkit:RatingItem">
-                        				<Setter Property="Background" Value="DarkRed" />
+                                        <Setter Property="Background" Value="OrangeRed" />
                         			</Style>
                         		</toolkit:Rating.UnfilledItemStyle>
                         	</toolkit:Rating>
