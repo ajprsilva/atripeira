@@ -178,31 +178,27 @@
             </phone:PivotItem>
 
             <!--Pivot item 3-->
-            <phone:PivotItem Header="Carta" Margin="10,38,14,-10">
-                <StackPanel Orientation="Horizontal" Margin="14,10,10,23" Width="432">
-                    <StackPanel Width="324">
-                        <StackPanel Height="60" Background="#B2FFFFFF">
-                            <phone:LongListSelector ItemsSource="{Binding Items}">
-                                <phone:LongListSelector.ItemTemplate>
+            <phone:PivotItem Header="Carta" Margin="10,38,14,-10">                
+                <phone:LongListSelector ItemsSource="{Binding Items}" Height="16776932">
+                    <phone:LongListSelector.ListHeaderTemplate>
+                        <DataTemplate>
+                            <Grid Margin="12,0,0,38">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                            </Grid>
+                        </DataTemplate>
+                    </phone:LongListSelector.ListHeaderTemplate>
+                    <phone:LongListSelector.ItemTemplate>
                                     <DataTemplate>
-                                        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="587" Width="436"  Text="{Binding Nome}" Foreground="Black"/>
+                                        <StackPanel>
+                                            <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="587" Width="436"  Text="{Binding Nome}" Foreground="Black"/>
+                                            <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="587" Width="436"  Text="{Binding Preco}" Foreground="Black"/>
+                                        </StackPanel>
                                     </DataTemplate>
                                 </phone:LongListSelector.ItemTemplate>
                             </phone:LongListSelector>
-                        </StackPanel>
-                    </StackPanel>
-                    <StackPanel Width="107">
-                        <StackPanel Height="60">
-                            <phone:LongListSelector ItemsSource="{Binding Items}">
-                                <phone:LongListSelector.ItemTemplate>
-                                    <DataTemplate>
-                                        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="587" Width="436"  Text="{Binding Preco}" Foreground="Black"/>
-                                    </DataTemplate>
-                                </phone:LongListSelector.ItemTemplate>
-                            </phone:LongListSelector>
-                        </StackPanel>
-                    </StackPanel>
-                </StackPanel>
             </phone:PivotItem>
         </phone:Pivot>
     </Grid>
