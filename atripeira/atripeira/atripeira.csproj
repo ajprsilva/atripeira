@@ -276,9 +276,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="10668169_623545497764951_113519384_n.jpg" />
     <Resource Include="brutal.png" />
+    <Resource Include="Capa_App.png" />
+    <Resource Include="capinha.png" />
     <Resource Include="Clérigos_01.jpg" />
     <Resource Include="desenho01-15.jpg" />
+    <Resource Include="fundocapa.png" />
+    <Resource Include="icon.png" />
+    <Resource Include="testarmau.png" />
     <Resource Include="Tripeira1-01.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />

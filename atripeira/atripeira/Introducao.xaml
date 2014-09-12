@@ -8,16 +8,18 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
-    Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d"
-    shell:SystemTray.IsVisible="True">
+    shell:SystemTray.IsVisible="True" Background="White">
+	<phone:PhoneApplicationPage.Foreground>
+		<SolidColorBrush Color="{StaticResource PhoneForegroundColor}"/>
+	</phone:PhoneApplicationPage.Foreground>
 
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot">
-        <Grid.Background>
-            <ImageBrush Stretch="Fill"/>
-        </Grid.Background>
+    	<Grid.Background>
+    		<ImageBrush Stretch="Fill" ImageSource="fundocapa.png"/>
+    	</Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -28,19 +30,20 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+        	<Grid.Background>
+        		<ImageBrush Stretch="Uniform" ImageSource="icon.png"/>
+        	</Grid.Background>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="37*"/>
                 <ColumnDefinition Width="39*"/>
             </Grid.ColumnDefinitions>
-            <Image HorizontalAlignment="Left" Height="178" Margin="135,248,0,0" VerticalAlignment="Top" Width="172" Grid.ColumnSpan="2" Stretch="Fill" Source="/Assets/ApplicationIcon.png"/>
 
         </Grid>
         <StackPanel HorizontalAlignment="Center" Margin="190,538,183,0" Grid.Row="1">
-            <TextBlock TextWrapping="Wrap" TextAlignment="Center" Padding="5" HorizontalAlignment="Center">
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center" Padding="5" HorizontalAlignment="Center" Foreground="Black">
         		<Run Text="Bem Vindo"/>
             </TextBlock>
         </StackPanel>
-        <TextBlock Margin="46,0,0,0" Grid.Row="1" TextWrapping="Wrap" Text="A Tripeira" VerticalAlignment="Top" Height="174" FontSize="72" FontFamily="Segoe WP Black" HorizontalAlignment="Left" Width="369"/>
     </Grid>
 
 </phone:PhoneApplicationPage>
