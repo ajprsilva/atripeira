@@ -4,6 +4,7 @@ using System.ComponentModel;
 using atripeira.Resources;
 using Microsoft.WindowsAzure.MobileServices;
 using atripeira.DataModels;
+using System.Threading.Tasks;
 
 namespace atripeira.ViewModels
 {
@@ -63,19 +64,24 @@ namespace atripeira.ViewModels
         /// <summary>
         /// Creates and adds a few ItemViewModel objects into the Items collection.
         /// </summary>
-        public async void LoadData()
+        public async Task<ObservableCollection<carta1ViewModel>> LoadData(string id)
         {
             try
             {
-                items = await todoTable.CreateQuery().ToCollectionAsync();
+                items = await todoTable.Where(todoItem => todoItem.idRest == id).ToCollectionAsync();
             }
             catch (Exception ex) {
                 string st = ex.Message.ToString();
             }            
             
-            // Sample data; replace with real data
-            this.Items.Add(new carta1ViewModel() {  });
+            foreach(carta cat in items){
+                 // Sample data; replace with real data
+                this.Items.Add(new carta1ViewModel() { iD=cat.Id, Nome=cat.nome, Descricao=cat.descricao, Preco=cat.preco, idRest=cat.idRest});
+            }
+           
             this.IsDataLoaded = true;
+
+            return this.Items;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

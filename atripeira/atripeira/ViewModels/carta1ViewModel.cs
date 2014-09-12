@@ -10,69 +10,107 @@ namespace atripeira.ViewModels
     public class carta1ViewModel : INotifyPropertyChanged
     {
 
-        public string nome { get; set; }
-        public string descricao { get; set; }
-        public string preco { get; set; }
-        public int idRest { get; set; }
-        private string _lineOne;
+        private string _id;
         /// <summary>
         /// Sample ViewModel property; this property is used in the view to display its value using a Binding.
         /// </summary>
         /// <returns></returns>
-        public string LineOne
+        public string iD
         {
             get
             {
-                return _lineOne;
+                return _id;
             }
             set
             {
-                if (value != _lineOne)
+                if (value != _id)
                 {
-                    _lineOne = value;
-                    NotifyPropertyChanged("LineOne");
+                    _nome = value;
+                    NotifyPropertyChanged("Nome");
                 }
             }
         }
 
-        private string _lineTwo;
+        private string _nome;
         /// <summary>
         /// Sample ViewModel property; this property is used in the view to display its value using a Binding.
         /// </summary>
         /// <returns></returns>
-        public string LineTwo
+        public string Nome
         {
             get
             {
-                return _lineTwo;
+                return _nome;
             }
             set
             {
-                if (value != _lineTwo)
+                if (value != _nome)
                 {
-                    _lineTwo = value;
-                    NotifyPropertyChanged("LineTwo");
+                    _nome = value;
+                    NotifyPropertyChanged("Nome");
                 }
             }
         }
 
-        private string _lineThree;
+        private string _descricao;
         /// <summary>
         /// Sample ViewModel property; this property is used in the view to display its value using a Binding.
         /// </summary>
         /// <returns></returns>
-        public string LineThree
+        public string Descricao
         {
             get
             {
-                return _lineThree;
+                return _descricao;
             }
             set
             {
-                if (value != _lineThree)
+                if (value != _descricao)
                 {
-                    _lineThree = value;
-                    NotifyPropertyChanged("LineThree");
+                    _descricao = value;
+                    NotifyPropertyChanged("Descricao");
+                }
+            }
+        }
+
+        private string _preco;
+        /// <summary>
+        /// Sample ViewModel property; this property is used in the view to display its value using a Binding.
+        /// </summary>
+        /// <returns></returns>
+        public string Preco
+        {
+            get
+            {
+                return _preco;
+            }
+            set
+            {
+                if (value != _preco)
+                {
+                    _preco = value;
+                    NotifyPropertyChanged("Preco");
+                }
+            }
+        }
+
+        private int _idRest;
+        /// <summary>
+        /// Sample ViewModel property; this property is used in the view to display its value using a Binding.
+        /// </summary>
+        /// <returns></returns>
+        public int idRest
+        {
+            get
+            {
+                return _idRest;
+            }
+            set
+            {
+                if (value != _idRest)
+                {
+                    _idRest = value;
+                    NotifyPropertyChanged("idRest");
                 }
             }
         }
