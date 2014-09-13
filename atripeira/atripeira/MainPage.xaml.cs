@@ -95,7 +95,7 @@ namespace atripeira
             var temp = (ItemViewModel)sd.SelectedItem;
 
             if (temp != null)
-                NavigationService.Navigate(new Uri("/Restaurante.xaml?parameter=" + temp.LineThree, UriKind.Relative));
+                NavigationService.Navigate(new Uri("/Restaurante.xaml?parameter=" + temp.ID, UriKind.Relative));
         }
 
         private void ApplicationBarMenuItem_Click(object sender, EventArgs e)

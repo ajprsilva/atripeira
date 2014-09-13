@@ -1,0 +1,64 @@
+﻿<phone:PhoneApplicationPage
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    x:Class="atripeira.Perfil"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+	<Grid x:Name="LayoutRoot" Background="Transparent">
+		<!--Pivot Control-->
+		<phone:Pivot Title="A tripeira">
+            <!--Pivot item one-->
+			<phone:PivotItem Header="Perfil">
+				<toolkit:WrapPanel HorizontalAlignment="Left" Height="603" VerticalAlignment="Top" Width="456">
+					<StackPanel HorizontalAlignment="Left" Height="66" VerticalAlignment="Top" Width="456" Margin="0,40,-456,-106">
+						<TextBlock TextWrapping="Wrap">
+                            <Run Text="Nome:" />
+                            <Run Text="{Binding Nome}" />
+                        </TextBlock>
+                    </StackPanel>
+					<StackPanel HorizontalAlignment="Left" Height="66" VerticalAlignment="Top" Width="456" Margin="0,111,-456,-177">
+                        <TextBlock TextWrapping="Wrap">
+                            <Run Text="Morada:" />
+                            <Run Text="{Binding Morada}" />
+                        </TextBlock>
+                    </StackPanel>
+					<StackPanel HorizontalAlignment="Left" Height="66" VerticalAlignment="Top" Width="456" Margin="0,177,-456,-243">
+                        <TextBlock TextWrapping="Wrap">
+                            <Run Text="Capacidade:" />
+                            <Run Text="{Binding Capacidade}" />
+                        </TextBlock>
+                    </StackPanel>
+					<StackPanel HorizontalAlignment="Left" Height="66" VerticalAlignment="Top" Width="456" Margin="0,243,-456,-309">
+                        <TextBlock TextWrapping="Wrap">
+                            <Run Text="Contacto:" />
+                            <Run Text="{Binding Contacto}" />
+                        </TextBlock>
+                    </StackPanel>
+					<StackPanel HorizontalAlignment="Left" Height="66" VerticalAlignment="Top" Width="456" Margin="0,309,-456,-375">
+                        <TextBlock TextWrapping="Wrap">
+                            <Run Text="Breve descriçao:" />
+                            <Run Text="{Binding Descricao}" />
+                        </TextBlock>
+                    </StackPanel>
+				</toolkit:WrapPanel>
+			</phone:PivotItem>
+
+			<!--Pivot item two-->
+			<phone:PivotItem Header="Editar">
+				<Grid/>
+			</phone:PivotItem>
+		</phone:Pivot>
+	</Grid>
+    
+</phone:PhoneApplicationPage>

@@ -107,10 +107,10 @@
                                         <Border BorderThickness="1" Width="99" Height="99" BorderBrush="#B2EE4D10" Background="#B2EE4D10"/>
                                         <StackPanel Width="311" Margin="8,-7,0,0">
                                             <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Width="311" Background="#CCFFFFFF">
-                                                <TextBlock Text="{Binding LineOne}" TextWrapping="Wrap" Margin="10,0" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}" Foreground="Black" />
+                                                <TextBlock Text="{Binding Nome}" TextWrapping="Wrap" Margin="10,0" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}" Foreground="Black" />
                                             </StackPanel>
                                             <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Width="311" Height="46" Background="#CCFFFFFF">
-                                                <toolkit:Rating Width="180" Height="40" x:Name="RatingControl6" RatingItemCount="5"  Value="{Binding LineTwo}" Margin="0,0,0,0" VerticalAlignment="Bottom" Background="{x:Null}" ReadOnly="True">
+                                                <toolkit:Rating Width="180" Height="40" x:Name="RatingControl6" RatingItemCount="5"  Value="{Binding Pontuacao}" Margin="0,0,0,0" VerticalAlignment="Bottom" Background="{x:Null}" ReadOnly="True">
                                                     <toolkit:Rating.FilledItemStyle>
                                                         <Style TargetType="toolkit:RatingItem">
                                                             <Setter Property="Background" Value="OrangeRed" />

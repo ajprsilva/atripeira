@@ -62,8 +62,8 @@
         </shell:ApplicationBar>
 
         <shell:ApplicationBar x:Key="registo" IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Assets/View-Small-Icons-01.png" Text="Registar" Click="ApplicationBarIconButton_Click_1"/>
             <shell:ApplicationBar.MenuItems>
-                <shell:ApplicationBarIconButton IconUri="/Assets/View-Small-Icons-01.png" Text="Registar"/>
                 <shell:ApplicationBarMenuItem Text="Ajuda"/>
             </shell:ApplicationBar.MenuItems>
         </shell:ApplicationBar>

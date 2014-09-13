@@ -86,12 +86,12 @@ namespace atripeira.ViewModels
             {
                 if (i == 0)
                 {
-                    this.Items.Add(new ItemViewModel() { LineOne = resta.nome, LineThree = resta.idVideo });
+                    this.Items.Add(new ItemViewModel() { Nome = resta.nome, ID = resta.idVideo });
                     i = 1;
                 }
                 else
                 {
-                    this.Items2.Add(new ItemViewModel() { LineOne = resta.nome, LineThree = resta.idVideo });
+                    this.Items2.Add(new ItemViewModel() { Nome = resta.nome, ID = resta.idVideo });
                     i = 0;
                 }                
             }

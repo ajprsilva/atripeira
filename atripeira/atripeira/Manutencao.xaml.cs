@@ -16,5 +16,27 @@ namespace atripeira
         {
             InitializeComponent();
         }
+
+        private void Border_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Tripas.xaml", UriKind.Relative));
+        }
+
+        private void Border_Tap1(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Perfil.xaml", UriKind.Relative));
+        }
+
+        private void Border_Tap2(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Carta.xaml", UriKind.Relative));
+        }
+
+        private void Border_Tap3(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Fotos.xaml", UriKind.Relative));
+        }
+
+        
     }
 }

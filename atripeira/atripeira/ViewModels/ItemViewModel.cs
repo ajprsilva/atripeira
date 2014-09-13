@@ -5,65 +5,149 @@ namespace atripeira.ViewModels
 {
     public class ItemViewModel : INotifyPropertyChanged
     {
-        private string _lineOne;
+        private string _Nome;
         /// <summary>
         /// Sample ViewModel property; this property is used in the view to display its value using a Binding.
         /// </summary>
         /// <returns></returns>
-        public string LineOne
+        public string Nome
         {
             get
             {
-                return _lineOne;
+                return _Nome;
             }
             set
             {
-                if (value != _lineOne)
+                if (value != _Nome)
                 {
-                    _lineOne = value;
-                    NotifyPropertyChanged("LineOne");
+                    _Nome = value;
+                    NotifyPropertyChanged("Nome");
                 }
             }
         }
 
-        private double _lineTwo;
+        private string _Morada;
         /// <summary>
         /// Sample ViewModel property; this property is used in the view to display its value using a Binding.
         /// </summary>
         /// <returns></returns>
-        public double LineTwo
+        public string Morada
         {
             get
             {
-                return _lineTwo;
+                return _Morada;
             }
             set
             {
-                if (value != _lineTwo)
+                if (value != _Morada)
                 {
-                    _lineTwo = value;
-                    NotifyPropertyChanged("LineTwo");
+                    _Morada = value;
+                    NotifyPropertyChanged("Morada");
                 }
             }
         }
 
-        private string _lineThree;
+        private int _Capacidade;
         /// <summary>
         /// Sample ViewModel property; this property is used in the view to display its value using a Binding.
         /// </summary>
         /// <returns></returns>
-        public string LineThree
+        public int Capacidade
         {
             get
             {
-                return _lineThree;
+                return _Capacidade;
             }
             set
             {
-                if (value != _lineThree)
+                if (value != _Capacidade)
                 {
-                    _lineThree = value;
-                    NotifyPropertyChanged("LineThree");
+                    _Capacidade = value;
+                    NotifyPropertyChanged("Capacidade");
+                }
+            }
+        }
+
+        private int _Contacto;
+        /// <summary>
+        /// Sample ViewModel property; this property is used in the view to display its value using a Binding.
+        /// </summary>
+        /// <returns></returns>
+        public int Contacto
+        {
+            get
+            {
+                return _Contacto;
+            }
+            set
+            {
+                if (value != _Contacto)
+                {
+                    _Contacto = value;
+                    NotifyPropertyChanged("Contacto");
+                }
+            }
+        }
+
+        private string _Descricao;
+        /// <summary>
+        /// Sample ViewModel property; this property is used in the view to display its value using a Binding.
+        /// </summary>
+        /// <returns></returns>
+        public string Descricao
+        {
+            get
+            {
+                return _Descricao;
+            }
+            set
+            {
+                if (value != _Descricao)
+                {
+                    _Descricao = value;
+                    NotifyPropertyChanged("Descricao");
+                }
+            }
+        }
+
+        private double _Pontuacao;
+        /// <summary>
+        /// Sample ViewModel property; this property is used in the view to display its value using a Binding.
+        /// </summary>
+        /// <returns></returns>
+        public double Pontuacao
+        {
+            get
+            {
+                return _Pontuacao;
+            }
+            set
+            {
+                if (value != _Pontuacao)
+                {
+                    _Pontuacao = value;
+                    NotifyPropertyChanged("Pontuacao");
+                }
+            }
+        }
+
+        private string _ID;
+        /// <summary>
+        /// Sample ViewModel property; this property is used in the view to display its value using a Binding.
+        /// </summary>
+        /// <returns></returns>
+        public string ID
+        {
+            get
+            {
+                return _ID;
+            }
+            set
+            {
+                if (value != _ID)
+                {
+                    _ID = value;
+                    NotifyPropertyChanged("ID");
                 }
             }
         }

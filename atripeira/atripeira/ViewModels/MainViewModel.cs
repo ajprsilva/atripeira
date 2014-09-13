@@ -82,7 +82,7 @@ namespace atripeira.ViewModels
 
             Deployment.Current.Dispatcher.BeginInvoke(()=>{
                 foreach (restaurante resta in items) {
-                    this.Items.Add(new ItemViewModel() { LineOne = resta.nome, LineTwo = Double.Parse(resta.Pontuacao), LineThree= resta.Id });
+                    this.Items.Add(new ItemViewModel() { Nome = resta.nome, Pontuacao = Double.Parse(resta.Pontuacao), ID= resta.Id });
                 }
             });
 
