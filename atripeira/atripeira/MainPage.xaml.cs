@@ -14,27 +14,17 @@ namespace atripeira
 {
     public partial class MainPage : PhoneApplicationPage
     {
+        private static MainViewModel viewModel = new MainViewModel();
         // Constructor
         public MainPage()
         {
             InitializeComponent();
-
-            // Set the data context of the listbox control to the sample data
-            DataContext = App.ViewModel;
-
-            // Sample code to localize the ApplicationBar
-            //BuildLocalizedApplicationBar();
+            progress.Visibility = Visibility.Visible;
+            DataContext = viewModel;
+            viewModel.LoadData();
+            progress.Visibility = Visibility.Collapsed;
+            
         }
-
-        // Load data for the ViewModel Items
-        protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
-            if (!App.ViewModel.IsDataLoaded)
-            {
-                App.ViewModel.LoadData();
-            }
-        }
-        
 
         private void TextBlock_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
@@ -80,8 +70,8 @@ namespace atripeira
         {
             var sd = (LongListSelector)sender;
             var temp = (ItemViewModel)sd.SelectedItem;
-            
-            if(temp!=null)
+
+            if (temp != null)
                 NavigationService.Navigate(new Uri("/Restaurante.xaml?parameter=" + temp.LineThree, UriKind.Relative));
         }
 

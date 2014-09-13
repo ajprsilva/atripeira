@@ -67,6 +67,8 @@
                 </Grid>
             </phone:PivotItem>
 
+            <!-- tem de ser mudada toda a janela! Motivos: o mapa, a opiniao cliente nao é scrollable e faltam as promoçoes, se é que fica nesta parte.-->
+            
             <!--Pivot item two-->
             <phone:PivotItem Header="Opinião Cliente" Margin="10,10,14,18">
                 <StackPanel Margin="14,10,10,23" Width="432" HorizontalAlignment="Left" VerticalAlignment="Top">
@@ -191,6 +193,7 @@
                         <TextBlock TextWrapping="Wrap" Text="Comentários:"/>
                     </StackPanel>
                     <StackPanel Height="97">
+                        <TextBox Height="72" TextWrapping="Wrap" Text="Nome"/>
                         <TextBox Height="72" TextWrapping="Wrap" Text="Comentário"/>
                     </StackPanel>
                 </StackPanel>

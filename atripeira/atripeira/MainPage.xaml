@@ -87,45 +87,53 @@
 
             <!--Pivot item two-->
             <phone:PivotItem Header="Restaurantes">
-                <phone:LongListSelector Margin="0,-38,-22,2" ItemsSource="{Binding Items}" Name="lst" Tap="lst_Tap">
-                    <phone:LongListSelector.ListHeaderTemplate>
-                        <DataTemplate>
-                            <Grid Margin="12,0,0,38">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="*"/>
-                                </Grid.RowDefinitions>
-                            </Grid>
-                        </DataTemplate>
-                    </phone:LongListSelector.ListHeaderTemplate>
-                    <phone:LongListSelector.ItemTemplate>
-                        <DataTemplate>
-                            <StackPanel Orientation="Horizontal" Margin="12,2,0,4" Height="105" Width="432">
-                                <!--Replace rectangle with image-->
-                                <Border BorderThickness="1" Width="99" Height="99" BorderBrush="#B2EE4D10" Background="#B2EE4D10"/>
-                                <StackPanel Width="311" Margin="8,-7,0,0">
-                                    <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Width="311" Background="#CCFFFFFF">
-                                        <TextBlock Text="{Binding LineOne}" TextWrapping="Wrap" Margin="10,0" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}" Foreground="Black" />
+                <toolkit:WrapPanel>
+                    <StackPanel Margin="0,0,-456,0">
+                        <phone:LongListSelector Margin="0,-38,-22,2" ItemsSource="{Binding Items}" Name="lst" Tap="lst_Tap">
+                            <phone:LongListSelector.ListHeaderTemplate>
+                                <DataTemplate>
+                                    <Grid Margin="12,0,0,38">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+                                    </Grid>
+                                </DataTemplate>
+                            </phone:LongListSelector.ListHeaderTemplate>
+                            <phone:LongListSelector.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal" Margin="12,2,0,4" Height="105" Width="432">
+                                        <!--Replace rectangle with image-->
+                                        <Border BorderThickness="1" Width="99" Height="99" BorderBrush="#B2EE4D10" Background="#B2EE4D10"/>
+                                        <StackPanel Width="311" Margin="8,-7,0,0">
+                                            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Width="311" Background="#CCFFFFFF">
+                                                <TextBlock Text="{Binding LineOne}" TextWrapping="Wrap" Margin="10,0" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}" Foreground="Black" />
+                                            </StackPanel>
+                                            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Width="311" Height="46" Background="#CCFFFFFF">
+                                                <toolkit:Rating Width="180" Height="40" x:Name="RatingControl6" RatingItemCount="5"  Value="{Binding LineTwo}" Margin="0,0,0,0" VerticalAlignment="Bottom" Background="{x:Null}" ReadOnly="True">
+                                                    <toolkit:Rating.FilledItemStyle>
+                                                        <Style TargetType="toolkit:RatingItem">
+                                                            <Setter Property="Background" Value="OrangeRed" />
+                                                        </Style>
+                                                    </toolkit:Rating.FilledItemStyle>
+                                                    <toolkit:Rating.UnfilledItemStyle>
+                                                        <Style TargetType="toolkit:RatingItem">
+                                                            <Setter Property="Background" Value="Orange" />
+                                                        </Style>
+                                                    </toolkit:Rating.UnfilledItemStyle>
+                                                </toolkit:Rating>
+                                            </StackPanel>
+                                        </StackPanel>
                                     </StackPanel>
-                                    <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Width="311" Height="46" Background="#CCFFFFFF">
-                                        <toolkit:Rating Width="180" Height="40" x:Name="RatingControl6" RatingItemCount="5"  Value="{Binding LineTwo}" Margin="0,0,0,0" VerticalAlignment="Bottom" Background="{x:Null}" ReadOnly="True">
-                                            <toolkit:Rating.FilledItemStyle>
-                                                <Style TargetType="toolkit:RatingItem">
-                                                    <Setter Property="Background" Value="OrangeRed" />
-                                                </Style>
-                                            </toolkit:Rating.FilledItemStyle>
-                                            <toolkit:Rating.UnfilledItemStyle>
-                                                <Style TargetType="toolkit:RatingItem">
-                                                    <Setter Property="Background" Value="Orange" />
-                                                </Style>
-                                            </toolkit:Rating.UnfilledItemStyle>
-                                        </toolkit:Rating>
-                                    </StackPanel>
-                                </StackPanel>
-                            </StackPanel>
-                        </DataTemplate>
-                    </phone:LongListSelector.ItemTemplate>
-                </phone:LongListSelector>
+                                </DataTemplate>
+                            </phone:LongListSelector.ItemTemplate>
+                        </phone:LongListSelector>
+                    </StackPanel>
+                    <StackPanel Margin="0,281,-456,-281">
+                        <ProgressBar IsIndeterminate="True" Visibility="Collapsed" Height="10" Width="200" Name="progress"/>
+                    </StackPanel>
+                </toolkit:WrapPanel>
+
             </phone:PivotItem>
 
 
@@ -145,19 +153,19 @@
     <phone:PhoneApplicationPage.Resources>
 
         <shell:ApplicationBar x:Key="resta" IsVisible="True" IsMenuEnabled="True">
-                <shell:ApplicationBarIconButton IconUri="/Assets/View-Small-Icons-01.png" Text="Todos"/>
-                <shell:ApplicationBarIconButton IconUri="/Assets/Search-Find.png" Text="Pesquisa"/>
-                <shell:ApplicationBar.MenuItems>
-                    <shell:ApplicationBarMenuItem Text="Área Reservada"/>
-                    <shell:ApplicationBarMenuItem Text="Ajuda"/>
-                </shell:ApplicationBar.MenuItems>
-            </shell:ApplicationBar>
+            <shell:ApplicationBarIconButton IconUri="/Assets/View-Small-Icons-01.png" Text="Todos"/>
+            <shell:ApplicationBarIconButton IconUri="/Assets/Search-Find.png" Text="Pesquisa"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="Área Reservada"/>
+                <shell:ApplicationBarMenuItem Text="Ajuda"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
 
         <shell:ApplicationBar x:Key="resta2" IsVisible="True" IsMenuEnabled="True">
-                <shell:ApplicationBar.MenuItems>
-                    <shell:ApplicationBarMenuItem Text="Área Reservada"/>
-                    <shell:ApplicationBarMenuItem Text="Ajuda"/>
-                </shell:ApplicationBar.MenuItems>
-            </shell:ApplicationBar>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="Área Reservada"/>
+                <shell:ApplicationBarMenuItem Text="Ajuda"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
     </phone:PhoneApplicationPage.Resources>
 </phone:PhoneApplicationPage>
