@@ -6,6 +6,7 @@ using Microsoft.WindowsAzure.MobileServices;
 using atripeira.DataModels;
 using System.Threading.Tasks;
 using System.Collections.Generic;
+using System.Windows;
 
 namespace atripeira.ViewModels
 {
@@ -79,9 +80,13 @@ namespace atripeira.ViewModels
                 string st = ex.Message.ToString();
             }
 
-            foreach (restaurante resta in items) {
-                this.Items.Add(new ItemViewModel() { LineOne = resta.nome, LineTwo = Double.Parse(resta.Pontuacao), LineThree= resta.Id });
-            }
+            Deployment.Current.Dispatcher.BeginInvoke(()=>{
+                foreach (restaurante resta in items) {
+                    this.Items.Add(new ItemViewModel() { LineOne = resta.nome, LineTwo = Double.Parse(resta.Pontuacao), LineThree= resta.Id });
+                }
+            });
+
+            
 
             this.IsDataLoaded = true;
         }

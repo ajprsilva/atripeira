@@ -9,21 +9,44 @@ using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using atripeira.Resources;
 using atripeira.ViewModels;
+using System.ComponentModel;
 
 namespace atripeira
 {
     public partial class MainPage : PhoneApplicationPage
     {
         private static MainViewModel viewModel = new MainViewModel();
+        private BackgroundWorker bw = new BackgroundWorker();
+
         // Constructor
         public MainPage()
         {
             InitializeComponent();
-            progress.Visibility = Visibility.Visible;
             DataContext = viewModel;
-            viewModel.LoadData();
+
+            bw.DoWork += bw_DoWork;
+            bw.RunWorkerCompleted += new RunWorkerCompletedEventHandler(bw_RunWorkerCompleted);
+            bw.WorkerReportsProgress = true;
+            bw.WorkerSupportsCancellation = true;
+            bw.RunWorkerAsync();
+
+        }
+
+        void bw_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
             progress.Visibility = Visibility.Collapsed;
-            
+        }
+
+        void bw_DoWork(object sender, DoWorkEventArgs e)
+        {
+            try
+            {
+                viewModel.LoadData();
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
 
         private void TextBlock_Tap(object sender, System.Windows.Input.GestureEventArgs e)
