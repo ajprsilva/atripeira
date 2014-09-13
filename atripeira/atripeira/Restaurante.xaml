@@ -67,7 +67,7 @@
                 </Grid>
             </phone:PivotItem>
 
-            <!-- tem de ser mudada toda a janela! Motivos: o mapa, a opiniao cliente nao é scrollable e faltam as promoçoes, se é que fica nesta parte.-->
+            <!-- tem de ser mudada toda a janela! Motivos: o mapa, a opiniao cliente nao é scrollable e faltam as promoçoes, se é que fica-->
             
             <!--Pivot item two-->
             <phone:PivotItem Header="Opinião Cliente" Margin="10,10,14,18">

@@ -75,6 +75,11 @@ namespace atripeira
                 NavigationService.Navigate(new Uri("/Restaurante.xaml?parameter=" + temp.LineThree, UriKind.Relative));
         }
 
+        private void ApplicationBarMenuItem_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/AreaReservada.xaml", UriKind.Relative));
+        }
+
 
         // Sample code for building a localized ApplicationBar
         //private void BuildLocalizedApplicationBar()

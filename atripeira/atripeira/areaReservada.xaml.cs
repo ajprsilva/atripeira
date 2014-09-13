@@ -15,11 +15,26 @@ namespace atripeira
         public areaReservada()
         {
             InitializeComponent();
+        }       
+
+        private void Pivot_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+            switch ((sender as Pivot).SelectedIndex)
+                        {
+                            case 0:
+                                this.ApplicationBar = this.Resources["login"] as ApplicationBar;
+                                break;
+                            case 1:
+                                this.ApplicationBar = this.Resources["registo"] as ApplicationBar;
+                                break;
+                            default:
+                                break;
+                        }
         }
 
-        //private void ApplicationBarIconButton_Click(object sender, EventArgs e)
-        //{
-        //    NavigationService.Navigate(new Uri("/Manutencao.xaml", UriKind.Relative));
-        //}
+        private void ApplicationBarIconButton_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Manutencao.xaml", UriKind.Relative));
+        }
     }
 }

@@ -156,7 +156,7 @@
             <shell:ApplicationBarIconButton IconUri="/Assets/View-Small-Icons-01.png" Text="Todos"/>
             <shell:ApplicationBarIconButton IconUri="/Assets/Search-Find.png" Text="Pesquisa"/>
             <shell:ApplicationBar.MenuItems>
-                <shell:ApplicationBarMenuItem Text="Área Reservada"/>
+                <shell:ApplicationBarMenuItem Text="Área Reservada" Click="ApplicationBarMenuItem_Click"/>
                 <shell:ApplicationBarMenuItem Text="Ajuda"/>
             </shell:ApplicationBar.MenuItems>
         </shell:ApplicationBar>
