@@ -39,7 +39,7 @@ namespace atripeira
                 RatingControl6.Value = Double.Parse(rest.Pontuacao);
                 ratingNum.Text = rest.Pontuacao;
 
-                cartaViewModel1.LoadData(Int32.Parse(parameter));
+                cartaViewModel1.LoadData(parameter);
                 mapa("Avenida dos aliados, Porto, Portugal");
             }
         }

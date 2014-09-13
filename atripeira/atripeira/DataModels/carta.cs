@@ -21,6 +21,6 @@ namespace atripeira.DataModels
         public string preco { get; set; }
 
         [JsonProperty(PropertyName = "idRest")]
-        public int idRest { get; set; }
+        public String idRest { get; set; }
     }
 }

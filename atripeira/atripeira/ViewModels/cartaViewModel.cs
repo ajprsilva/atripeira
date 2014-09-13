@@ -64,7 +64,7 @@ namespace atripeira.ViewModels
         /// <summary>
         /// Creates and adds a few ItemViewModel objects into the Items collection.
         /// </summary>
-        public async void LoadData(int id)
+        public async void LoadData(String id)
         {
             try
             {

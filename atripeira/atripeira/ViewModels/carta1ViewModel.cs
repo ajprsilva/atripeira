@@ -25,8 +25,8 @@ namespace atripeira.ViewModels
             {
                 if (value != _id)
                 {
-                    _nome = value;
-                    NotifyPropertyChanged("Nome");
+                    _id= value;
+                    NotifyPropertyChanged("id");
                 }
             }
         }
@@ -94,12 +94,12 @@ namespace atripeira.ViewModels
             }
         }
 
-        private int _idRest;
+        private string _idRest;
         /// <summary>
         /// Sample ViewModel property; this property is used in the view to display its value using a Binding.
         /// </summary>
         /// <returns></returns>
-        public int idRest
+        public string idRest
         {
             get
             {
