@@ -17,6 +17,16 @@ namespace atripeira
             InitializeComponent();
         }
 
+        string parameter = string.Empty;
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            if (NavigationContext.QueryString.TryGetValue("parameter", out parameter))
+            {
+                
+            }
+
+        }
         private void Border_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
             NavigationService.Navigate(new Uri("/Tripas.xaml", UriKind.Relative));
@@ -29,7 +39,7 @@ namespace atripeira
 
         private void Border_Tap2(object sender, System.Windows.Input.GestureEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/Carta.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/Carta.xaml?parameter="+parameter, UriKind.Relative));
         }
 
         private void Border_Tap3(object sender, System.Windows.Input.GestureEventArgs e)

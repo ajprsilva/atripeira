@@ -17,14 +17,21 @@ namespace atripeira
         public Carta()
         {
             InitializeComponent();
-            string parameter = string.Empty;
-
+            
             DataContext = cartaViewModel1;
+
+            
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            string parameter = string.Empty;
 
             if (NavigationContext.QueryString.TryGetValue("parameter", out parameter))
             {
                 cartaViewModel1.LoadData(parameter);
             }
+
         }
 
     }

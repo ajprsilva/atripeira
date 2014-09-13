@@ -34,7 +34,7 @@ namespace atripeira
 
         private void ApplicationBarIconButton_Click(object sender, EventArgs e)
         {
-            NavigationService.Navigate(new Uri("/Manutencao.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/Manutencao.xaml?parameter="+"1", UriKind.Relative));
         }
 
         private void ApplicationBarIconButton_Click_1(object sender, EventArgs e)
