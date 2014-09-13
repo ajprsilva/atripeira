@@ -34,7 +34,7 @@ namespace atripeira
             var sd = (LongListSelector)sender;
             var temp = (ItemViewModel)sd.SelectedItem;
 
-            await YouTube.PlayWithPageDeactivationAsync(temp.LineThree, true, YouTubeQuality.Quality480P);
+            //await YouTube.PlayWithPageDeactivationAsync(temp.LineThree, true, YouTubeQuality.Quality480P);
 
             GC.Collect();
         }
