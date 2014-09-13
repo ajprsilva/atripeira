@@ -36,19 +36,19 @@
 					<StackPanel HorizontalAlignment="Left" Height="66" VerticalAlignment="Top" Width="456" Margin="0,177,-456,-243">
                         <TextBlock TextWrapping="Wrap">
                             <Run Text="Capacidade:" />
-                            <Run Text="{Binding Capacidade}" />
+                            <!--<Run Text="{Binding Capacidade}" />-->
                         </TextBlock>
                     </StackPanel>
 					<StackPanel HorizontalAlignment="Left" Height="66" VerticalAlignment="Top" Width="456" Margin="0,243,-456,-309">
                         <TextBlock TextWrapping="Wrap">
                             <Run Text="Contacto:" />
-                            <Run Text="{Binding Contacto}" />
+                            <!--<Run Text="{Binding Contacto}" />-->
                         </TextBlock>
                     </StackPanel>
 					<StackPanel HorizontalAlignment="Left" Height="66" VerticalAlignment="Top" Width="456" Margin="0,309,-456,-375">
                         <TextBlock TextWrapping="Wrap">
                             <Run Text="Breve descriçao:" />
-                            <Run Text="{Binding Descricao}" />
+                            <!--<Run Text="{Binding Descricao}" />-->
                         </TextBlock>
                     </StackPanel>
 				</toolkit:WrapPanel>
