@@ -23,7 +23,7 @@ namespace atripeira
 
             if (NavigationContext.QueryString.TryGetValue("parameter", out parameter))
             {
-                cartaViewModel1.LoadData(Int32.Parse(parameter));
+                cartaViewModel1.LoadData(parameter);
             }
         }
 
