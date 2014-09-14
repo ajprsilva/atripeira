@@ -200,6 +200,38 @@
                 </ScrollViewer>
             </phone:PivotItem>
 
+            <phone:PivotItem Header="Comentários" HorizontalAlignment="Left" Height="630" Margin="0" VerticalAlignment="Top" Width="480">
+                <phone:LongListSelector Height="620" Width="480">
+                    <phone:LongListSelector.ListHeaderTemplate>
+                        <DataTemplate>
+                            <Grid Margin="12,0,0,38">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                            </Grid>
+                        </DataTemplate>
+                    </phone:LongListSelector.ListHeaderTemplate>
+                    <phone:LongListSelector.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" Margin="12,2,0,4" Height="105" Width="432">
+                                <!--Replace rectangle with image-->
+                                <Border BorderThickness="1" Width="99" Height="99" BorderBrush="#B2EE4D10" Background="#B2EE4D10"/>
+                                <StackPanel Width="311" Margin="8,-7,0,0">
+                                    <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Width="311" Background="#CCFFFFFF">
+                                        <TextBlock Text="{Binding Nome}" TextWrapping="Wrap" Margin="10,0" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}" Foreground="Black" />
+                                    </StackPanel>
+                                    <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Width="311" Height="46" Background="#CCFFFFFF">
+                                        <TextBlock Text="{Binding Nome}" TextWrapping="Wrap" Margin="10,0" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}" Foreground="Black" />
+                                    </StackPanel>
+                                </StackPanel>
+                            </StackPanel>
+                        </DataTemplate>
+                    </phone:LongListSelector.ItemTemplate>
+                </phone:LongListSelector>
+
+            </phone:PivotItem>
+            
             <!--Pivot item 3-->
             <phone:PivotItem Header="Carta" Margin="10,38,14,-10">
                 <phone:LongListSelector Margin="0,-38,-22,2" ItemsSource="{Binding Items}">
