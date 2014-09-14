@@ -34,7 +34,7 @@ namespace atripeira
 
         private void Border_Tap1(object sender, System.Windows.Input.GestureEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/Perfil.xaml?parameter=" + parameter, UriKind.Relative));
+            NavigationService.Navigate(new Uri("/Perfil.xaml?parameter=B3CEC9AD-C6D8-4577-9F53-1474350090CA", UriKind.Relative));
         }
 
         private void Border_Tap2(object sender, System.Windows.Input.GestureEventArgs e)
