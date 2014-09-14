@@ -41,7 +41,7 @@
                                 <DataTemplate>
 
 
-                                    <StackPanel  Orientation="Horizontal" Margin="0,0,0,260">
+                                    <StackPanel  Orientation="Horizontal" Margin="0,20,0,260">
                                         <Border Background="#B2EE4D10" Height="173" Width="173" Margin="12,0,0,0">
                                             <toolkit:WrapPanel HorizontalAlignment="Left" Height="189" VerticalAlignment="Top" Width="456" Margin="0,0,-283,-16">
                                                 <TextBlock Name="temo" HorizontalAlignment="Left" Margin="10,120,0,-110" TextWrapping="Wrap" VerticalAlignment="Top" Height="46" Width="152"  Text="{Binding Nome}"/>
@@ -54,7 +54,7 @@
 
                         </ItemsControl>
 
-                        <ItemsControl ItemsSource="{Binding Items2}" Margin="0,205,0,131">
+                        <ItemsControl ItemsSource="{Binding Items2}" Margin="0,-20,0,131">
                             <ItemsControl.ItemTemplate>
                                 <DataTemplate>
                                     <StackPanel  Orientation="Horizontal" Margin="0,223,0,61">
