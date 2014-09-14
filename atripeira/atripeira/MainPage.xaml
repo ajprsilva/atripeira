@@ -113,12 +113,12 @@
                                                 <toolkit:Rating Width="180" Height="40" x:Name="RatingControl6" RatingItemCount="5"  Value="{Binding Pontuacao}" Margin="0,0,0,0" VerticalAlignment="Bottom" Background="{x:Null}" ReadOnly="True">
                                                     <toolkit:Rating.FilledItemStyle>
                                                         <Style TargetType="toolkit:RatingItem">
-                                                            <Setter Property="Background" Value="OrangeRed" />
+                                                            <Setter Property="Background" Value="Orange" />
                                                         </Style>
                                                     </toolkit:Rating.FilledItemStyle>
                                                     <toolkit:Rating.UnfilledItemStyle>
                                                         <Style TargetType="toolkit:RatingItem">
-                                                            <Setter Property="Background" Value="Orange" />
+                                                            <Setter Property="Background" Value="OrangeRed" />
                                                         </Style>
                                                     </toolkit:Rating.UnfilledItemStyle>
                                                 </toolkit:Rating>

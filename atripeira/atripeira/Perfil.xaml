@@ -15,50 +15,56 @@
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-	<Grid x:Name="LayoutRoot" Background="Transparent">
-		<!--Pivot Control-->
-		<phone:Pivot Title="A tripeira">
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <!--Pivot Control-->
+        <phone:Pivot Title="A tripeira">
             <!--Pivot item one-->
-			<phone:PivotItem Header="Perfil">
-				<toolkit:WrapPanel HorizontalAlignment="Left" Height="603" VerticalAlignment="Top" Width="456">
-					<StackPanel HorizontalAlignment="Left" Height="66" VerticalAlignment="Top" Width="456" Margin="0,40,-456,-106">
-						<TextBlock TextWrapping="Wrap">
-                            <Run Text="Nome:" />
-                            <Run Text="{Binding Nome}" />
-                        </TextBlock>
-                    </StackPanel>
-					<StackPanel HorizontalAlignment="Left" Height="66" VerticalAlignment="Top" Width="456" Margin="0,111,-456,-177">
-                        <TextBlock TextWrapping="Wrap">
-                            <Run Text="Morada:" />
-                            <Run Text="{Binding Morada}" />
-                        </TextBlock>
-                    </StackPanel>
-					<StackPanel HorizontalAlignment="Left" Height="66" VerticalAlignment="Top" Width="456" Margin="0,177,-456,-243">
-                        <TextBlock TextWrapping="Wrap">
-                            <Run Text="Capacidade:" />
-                            <!--<Run Text="{Binding Capacidade}" />-->
-                        </TextBlock>
-                    </StackPanel>
-					<StackPanel HorizontalAlignment="Left" Height="66" VerticalAlignment="Top" Width="456" Margin="0,243,-456,-309">
-                        <TextBlock TextWrapping="Wrap">
-                            <Run Text="Contacto:" />
-                            <!--<Run Text="{Binding Contacto}" />-->
-                        </TextBlock>
-                    </StackPanel>
-					<StackPanel HorizontalAlignment="Left" Height="66" VerticalAlignment="Top" Width="456" Margin="0,309,-456,-375">
-                        <TextBlock TextWrapping="Wrap">
-                            <Run Text="Breve descriçao:" />
-                            <!--<Run Text="{Binding Descricao}" />-->
-                        </TextBlock>
-                    </StackPanel>
-				</toolkit:WrapPanel>
-			</phone:PivotItem>
+            <phone:PivotItem Header="Perfil">
+                <phone:LongListSelector Margin="0,-38,-22,2" ItemsSource="{Binding Items}">
+                    <phone:LongListSelector.ListHeaderTemplate>
+                        <DataTemplate>
+                            <toolkit:WrapPanel HorizontalAlignment="Left" Height="603" VerticalAlignment="Top" Width="456">
+                                <StackPanel HorizontalAlignment="Left" Height="66" VerticalAlignment="Top" Width="456" Margin="0,40,-456,-106">
+                                    <TextBlock TextWrapping="Wrap">
+                                        <Run Text="Nome:" />
+                                        <Run Text="{Binding Nome}" />
+                                    </TextBlock>
+                                </StackPanel>
+                                <StackPanel HorizontalAlignment="Left" Height="66" VerticalAlignment="Top" Width="456" Margin="0,111,-456,-177">
+                                    <TextBlock TextWrapping="Wrap">
+                                        <Run Text="Morada:" />
+                                        <Run Text="{Binding Morada}" />
+                                    </TextBlock>
+                                </StackPanel>
+                                <StackPanel HorizontalAlignment="Left" Height="66" VerticalAlignment="Top" Width="456" Margin="0,177,-456,-243">
+                                    <TextBlock TextWrapping="Wrap">
+                                        <Run Text="Capacidade:" />
+                                        <!--<Run Text="{Binding Capacidade}" />-->
+                                    </TextBlock>
+                                </StackPanel>
+                                <StackPanel HorizontalAlignment="Left" Height="66" VerticalAlignment="Top" Width="456" Margin="0,243,-456,-309">
+                                    <TextBlock TextWrapping="Wrap">
+                                        <Run Text="Contacto:" />
+                                        <!--<Run Text="{Binding Contacto}" />-->
+                                    </TextBlock>
+                                </StackPanel>
+                                <StackPanel HorizontalAlignment="Left" Height="66" VerticalAlignment="Top" Width="456" Margin="0,309,-456,-375">
+                                    <TextBlock TextWrapping="Wrap">
+                                        <Run Text="Breve descriçao:" />
+                                        <Run Text="{Binding Descricao}" />
+                                    </TextBlock>
+                                </StackPanel>
+                            </toolkit:WrapPanel>
+                        </DataTemplate>
+                    </phone:LongListSelector.ListHeaderTemplate>
+                </phone:LongListSelector>
+            </phone:PivotItem>
 
-			<!--Pivot item two-->
-			<phone:PivotItem Header="Editar">
-				<Grid/>
-			</phone:PivotItem>
-		</phone:Pivot>
-	</Grid>
-    
+            <!--Pivot item two-->
+            <phone:PivotItem Header="Editar">
+                <Grid/>
+            </phone:PivotItem>
+        </phone:Pivot>
+    </Grid>
+
 </phone:PhoneApplicationPage>
