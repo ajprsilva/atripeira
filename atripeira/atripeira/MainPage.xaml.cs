@@ -66,7 +66,7 @@ namespace atripeira
 
         private void TextBlock_Tap_3(object sender, System.Windows.Input.GestureEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/Videos.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/Video1.xaml", UriKind.Relative));
         }
 
         private void PhoneApplicationPage_BackKeyPress(object sender, System.ComponentModel.CancelEventArgs e)
