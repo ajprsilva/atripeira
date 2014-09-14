@@ -15,6 +15,7 @@ namespace atripeira
 {
     public partial class MainPage : PhoneApplicationPage
     {
+        private static CosinhasViewModel viewModel2 = new CosinhasViewModel();
         private static MainViewModel viewModel = new MainViewModel();
         private BackgroundWorker bw = new BackgroundWorker();
 
@@ -22,6 +23,7 @@ namespace atripeira
         public MainPage()
         {
             InitializeComponent();
+
             DataContext = viewModel;
 
             bw.DoWork += bw_DoWork;
@@ -101,6 +103,22 @@ namespace atripeira
         private void ApplicationBarMenuItem_Click(object sender, EventArgs e)
         {
             NavigationService.Navigate(new Uri("/AreaReservada.xaml", UriKind.Relative));
+        }
+
+        private void ApplicationBarIconButton_Click(object sender, EventArgs e)
+        {
+            viewModel= new MainViewModel();
+
+            DataContext = null;
+            DataContext = viewModel;
+            try
+            {
+                viewModel.LoadData();
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
 
 

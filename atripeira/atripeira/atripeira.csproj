@@ -102,6 +102,7 @@
       <DependentUpon>Carta.xaml</DependentUpon>
     </Compile>
     <Compile Include="DataModels\carta.cs" />
+    <Compile Include="DataModels\Cosinha.cs" />
     <Compile Include="DataModels\restaurante.cs" />
     <Compile Include="DataModels\tripas.cs" />
     <Compile Include="DataModels\video.cs" />
@@ -150,6 +151,8 @@
     </Compile>
     <Compile Include="ViewModels\carta1ViewModel.cs" />
     <Compile Include="ViewModels\cartaViewModel.cs" />
+    <Compile Include="ViewModels\CosinhasViewModel.cs" />
+    <Compile Include="ViewModels\CosinhaViewModel.cs" />
     <Compile Include="ViewModels\ItemViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\tripasViewModel.cs" />

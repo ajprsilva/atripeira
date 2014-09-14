@@ -153,7 +153,7 @@
     <phone:PhoneApplicationPage.Resources>
 
         <shell:ApplicationBar x:Key="resta" IsVisible="True" IsMenuEnabled="True">
-            <shell:ApplicationBarIconButton IconUri="/Assets/View-Small-Icons-01.png" Text="Todos"/>
+            <shell:ApplicationBarIconButton IconUri="/Assets/View-Small-Icons-01.png" Text="Todos" Click="ApplicationBarIconButton_Click"/>
             <shell:ApplicationBarIconButton IconUri="/Assets/Search-Find.png" Text="Pesquisa"/>
             <shell:ApplicationBar.MenuItems>
                 <shell:ApplicationBarMenuItem Text="Área Reservada" Click="ApplicationBarMenuItem_Click"/>
