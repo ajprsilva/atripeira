@@ -36,6 +36,8 @@ namespace atripeira
                 var rest = await ViewModel1.LoadDataRestaurante(parameter);
                 txtNome.Text = rest.nome;
                 txtMorada.Text = rest.morada;
+                
+                txtIntro.Text = rest.Descricao;
                 RatingControl6.Value = Double.Parse(rest.Pontuacao.Replace('.', ','));
                 ratingNum.Text = rest.Pontuacao;
 

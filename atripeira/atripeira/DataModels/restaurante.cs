@@ -25,5 +25,8 @@ namespace atripeira.DataModels
 
         [JsonProperty(PropertyName = "totalVotos")]
         public int totalVotos { get; set; }
+
+        [JsonProperty(PropertyName = "Descricao")]
+        public string Descricao { get; set; }
     }
 }

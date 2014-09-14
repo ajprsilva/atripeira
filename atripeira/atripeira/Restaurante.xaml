@@ -40,7 +40,7 @@
                         </StackPanel>
                         <StackPanel HorizontalAlignment="Left" Height="426" VerticalAlignment="Top" Width="456" Margin="0,105,-456,-531">
                             <StackPanel Height="100" Background="#B2FFFFFF">
-                                <TextBlock TextWrapping="Wrap" Text="Texto de introdução" Height="100"/>
+                                <TextBlock TextWrapping="Wrap"  Name="txtIntro" Text="Texto de introdução" Height="100"/>
                             </StackPanel>
                             <toolkit:WrapPanel Height="325">
                                 <StackPanel HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Margin="0,0,-100,-100" Background="#B2EE4D10"/>
