@@ -31,7 +31,7 @@ namespace atripeira
 
         private async void ListBox_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
-            var sd = (ListBox)sender;
+            var sd = (LongListSelector)sender;
             var temp = (ItemViewModel)sd.SelectedItem;
 
             await YouTube.PlayWithPageDeactivationAsync(temp.ID, true, YouTubeQuality.Quality480P);
@@ -39,14 +39,65 @@ namespace atripeira
             GC.Collect();
         }
 
-        private async void ListBox_Tap_1(object sender, System.Windows.Input.GestureEventArgs e)
+        private async void temo_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
             var sd = (ListBox)sender;
             var temp = (ItemViewModel)sd.SelectedItem;
 
+            await YouTube.PlayWithPageDeactivationAsync("gi3rc9Pv2IA", true, YouTubeQuality.Quality480P);
+
+            GC.Collect();
+        }
+
+        private async void TextBlock_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            await YouTube.PlayWithPageDeactivationAsync("WvDveq5O3jU", true, YouTubeQuality.Quality480P);
+
+            GC.Collect();
+        }
+
+        private void ItemsControl_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+
+        }
+
+        private async void LongListSelector_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            var sd = (LongListSelector)sender;
+            var temp = (ItemViewModel)sd.SelectedItem;
+
             await YouTube.PlayWithPageDeactivationAsync(temp.ID, true, YouTubeQuality.Quality480P);
 
             GC.Collect();
         }
+
+        private async void LongListSelector_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var sd = (LongListSelector)sender;
+            var temp = (ItemViewModel)sd.SelectedItem;
+
+            await YouTube.PlayWithPageDeactivationAsync(temp.ID, true, YouTubeQuality.Quality480P);
+
+            GC.Collect();
+        }
+
+        private async void StackPanel_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            //var sd = (StackPanel)sender;
+            //var temp = (ItemViewModel)sd.SelectedItem;
+
+            await YouTube.PlayWithPageDeactivationAsync(TripasViewModel.Items[0].ID, true, YouTubeQuality.Quality480P);
+
+            GC.Collect();
+        }
+
+        private async void StackPanel_Tap_1(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            await YouTube.PlayWithPageDeactivationAsync(TripasViewModel.Items2[0].ID, true, YouTubeQuality.Quality480P);
+
+            GC.Collect();
+        }
+
+        
     }
 }
