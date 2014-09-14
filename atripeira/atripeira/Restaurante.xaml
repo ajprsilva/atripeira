@@ -288,7 +288,7 @@
 
     <phone:PhoneApplicationPage.Resources>
         <shell:ApplicationBar x:Key="resta" IsVisible="True" IsMenuEnabled="True">
-            <shell:ApplicationBarIconButton IconUri="/Assets/View-Small-Icons-01.png" Text="Reserva"/>
+            <shell:ApplicationBarIconButton IconUri="/Assets/View-Small-Icons-01.png" Text="Reserva" Click="AbrirMensagem_Click"/>
             <shell:ApplicationBar.MenuItems>
                 <shell:ApplicationBarMenuItem Text="Área Reservada"/>
                 <shell:ApplicationBarMenuItem Text="Ajuda"/>

@@ -117,6 +117,12 @@ namespace atripeira
 
             MessageBox.Show("Comentário inserido com sucesso!");
         }
+
+        private void AbrirMensagem_Click(object sender, EventArgs e)
+        {
+
+            NavigationService.Navigate(new Uri("/Mensagem.xaml", UriKind.Relative));
+        }
     }
 
     
