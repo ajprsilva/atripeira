@@ -229,39 +229,39 @@
                 <toolkit:WrapPanel>
                     <StackPanel Margin="0,0,-456,0">
                         <phone:LongListSelector Margin="0,-38,-22,2" ItemsSource="{Binding Items2}" Name="lst" Height="639">
-                            <phone:LongListSelector.ListHeaderTemplate>
-                                <DataTemplate>
-                                    <Grid Margin="12,0,0,38">
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="Auto"/>
-                                            <RowDefinition Height="*"/>
-                                        </Grid.RowDefinitions>
-                                    </Grid>
-                                </DataTemplate>
-                            </phone:LongListSelector.ListHeaderTemplate>
-                            <phone:LongListSelector.ItemTemplate>
-                                <DataTemplate>
-                                    <StackPanel Orientation="Horizontal" Margin="12,2,0,4" Height="105" Width="432">
-                                        <!--Replace rectangle with image-->
-                                        <Border BorderThickness="1" Width="99" Height="99" BorderBrush="#B2EE4D10" Background="#B2EE4D10"/>
-                                        <StackPanel Width="311" Margin="8,-7,0,0">
-                                            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Width="311" Background="#CCFFFFFF">
+                    <phone:LongListSelector.ListHeaderTemplate>
+                        <DataTemplate>
+                            <Grid Margin="12,0,0,38">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                            </Grid>
+                        </DataTemplate>
+                    </phone:LongListSelector.ListHeaderTemplate>
+                    <phone:LongListSelector.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" Margin="12,2,0,4" Height="105" Width="432">
+                                <!--Replace rectangle with image-->
+                                <Border BorderThickness="1" Width="99" Height="99" BorderBrush="#B2EE4D10" Background="#B2EE4D10"/>
+                                <StackPanel Width="311" Margin="8,-7,0,0">
+                                    <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Width="311" Background="#CCFFFFFF">
                                                 <TextBlock  TextWrapping="Wrap" Margin="10,0" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}" Foreground="Black" >
                                                     <Run Text="{Binding Nome}" />
                                                     <Run Text=" - " />
                                                     <Run Text="{Binding Pais}" />
                                                 </TextBlock>
-                                            </StackPanel>
+                                    </StackPanel>
                                             <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Width="311" Background="#CCFFFFFF">
                                                 <TextBlock  TextWrapping="Wrap" Margin="10,0" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}" Foreground="Black" >
                                                     <Run Text="{Binding Comentario}" />
                                                 </TextBlock>
-                                            </StackPanel>
-                                        </StackPanel>
                                     </StackPanel>
-                                </DataTemplate>
-                            </phone:LongListSelector.ItemTemplate>
-                        </phone:LongListSelector>
+                                </StackPanel>
+                            </StackPanel>
+                        </DataTemplate>
+                    </phone:LongListSelector.ItemTemplate>
+                </phone:LongListSelector>
                     </StackPanel>
                     <StackPanel Margin="0,281,-456,-281">
                         <ProgressBar IsIndeterminate="True" Visibility="Collapsed" Height="10" Width="200" Name="progress"/>
@@ -269,7 +269,7 @@
                 </toolkit:WrapPanel>
 
             </phone:PivotItem>
-
+            
             <!--Pivot item 3-->
             <phone:PivotItem Header="Carta" Margin="10,38,14,-10">
                 <phone:LongListSelector Margin="0,-38,-22,2" ItemsSource="{Binding Items1}">

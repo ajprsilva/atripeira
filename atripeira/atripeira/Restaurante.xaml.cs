@@ -154,6 +154,12 @@ namespace atripeira
         {
             NavigationService.Navigate(new Uri("/Mensagem.xaml", UriKind.Relative));
         }
+
+        private void AbrirMensagem_Click(object sender, EventArgs e)
+        {
+
+            NavigationService.Navigate(new Uri("/Mensagem.xaml", UriKind.Relative));
+        }
     }
 
     
