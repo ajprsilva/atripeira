@@ -142,6 +142,9 @@
     <Compile Include="Tripas.xaml.cs">
       <DependentUpon>Tripas.xaml</DependentUpon>
     </Compile>
+    <Compile Include="video1.xaml.cs">
+      <DependentUpon>video1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Videos.xaml.cs">
       <DependentUpon>Videos.xaml</DependentUpon>
     </Compile>
@@ -207,6 +210,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Tripas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="video1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

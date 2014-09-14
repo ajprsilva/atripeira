@@ -35,22 +35,24 @@
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0" >
             <phone:Panorama>
                 <phone:PanoramaItem Orientation="Horizontal" Width="823">
-                    <StackPanel Height="497" Orientation="Vertical">
+                    <StackPanel Height="497" Orientation="Horizontal">
                         <toolkit:WrapPanel Height="232">
-                            <ListBox Margin="0,0,0,254" Height="247" ItemsSource="{Binding Items}">
-                                <ListBox.ItemTemplate>
+                            <ListBox Margin="0,-185,-454,-131" ItemsSource="{Binding Items}" Tap="ListBox_Tap_1" >
+                                <ItemsPanelTemplate>
                                     <DataTemplate>
-                                        <StackPanel Orientation='Horizontal' >
-                                            <Border Background="#B2EE4D10" Height="173" Width="173" Margin="12,0,0,0">
-                                                <StackPanel HorizontalAlignment="Left" Height="535" VerticalAlignment="Top" Width="456">
-                                                    <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="587" Width="436"  Text="{Binding Nome}"/>
-                                                </StackPanel>
-                                            </Border>
-                                        </StackPanel>
+                                        <ScrollViewer VerticalAlignment="Top" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Width ="400">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Border Background="#B2EE4D10" Height="173" Width="173" Margin="12,0,0,0">
+                                                    <StackPanel HorizontalAlignment="Left" Height="535" VerticalAlignment="Top" Width="456">
+                                                        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="587" Width="436"  Text="{Binding Nome}"/>
+                                                    </StackPanel>
+                                                </Border>
+                                            </StackPanel>
+                                        </ScrollViewer>
                                     </DataTemplate>
-                                </ListBox.ItemTemplate>
+                                    </ItemsPanelTemplate>
                             </ListBox>
-                            <ListBox Margin="0,234,-811,-249" Height="247" ItemsSource="{Binding Items}">
+                            <ListBox Margin="0,-118,-811,-100" ItemsSource="{Binding Items2}" Tap="ListBox_Tap_1">
                                 <ListBox.ItemTemplate>
                                     <DataTemplate>
                                         <StackPanel Orientation='Horizontal' >

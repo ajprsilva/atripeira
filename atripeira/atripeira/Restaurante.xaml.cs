@@ -36,11 +36,11 @@ namespace atripeira
                 var rest = await ViewModel1.LoadDataRestaurante(parameter);
                 txtNome.Text = rest.nome;
                 txtMorada.Text = rest.morada;
-                RatingControl6.Value = Double.Parse(rest.Pontuacao);
+                RatingControl6.Value = Double.Parse(rest.Pontuacao.Replace('.', ','));
                 ratingNum.Text = rest.Pontuacao;
 
                 cartaViewModel1.LoadData(parameter);
-                mapa("Avenida dos aliados, Porto, Portugal");
+                mapa(rest.morada + ", Porto, Portugal");
             }
         }
 

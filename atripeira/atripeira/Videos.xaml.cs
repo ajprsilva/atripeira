@@ -29,9 +29,19 @@ namespace atripeira
             
         }
 
-        private async void LongListSelector_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        private async void ListBox_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
-            var sd = (LongListSelector)sender;
+            var sd = (ListBox)sender;
+            var temp = (ItemViewModel)sd.SelectedItem;
+
+            await YouTube.PlayWithPageDeactivationAsync(temp.ID, true, YouTubeQuality.Quality480P);
+
+            GC.Collect();
+        }
+
+        private async void ListBox_Tap_1(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            var sd = (ListBox)sender;
             var temp = (ItemViewModel)sd.SelectedItem;
 
             await YouTube.PlayWithPageDeactivationAsync(temp.ID, true, YouTubeQuality.Quality480P);

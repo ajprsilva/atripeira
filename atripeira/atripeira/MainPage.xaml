@@ -89,7 +89,7 @@
             <phone:PivotItem Header="Restaurantes">
                 <toolkit:WrapPanel>
                     <StackPanel Margin="0,0,-456,0">
-                        <phone:LongListSelector Margin="0,-38,-22,2" ItemsSource="{Binding Items}" Name="lst" Tap="lst_Tap">
+                        <phone:LongListSelector Margin="0,-38,-22,2" ItemsSource="{Binding Items}" Name="lst" Tap="lst_Tap" Height="639">
                             <phone:LongListSelector.ListHeaderTemplate>
                                 <DataTemplate>
                                     <Grid Margin="12,0,0,38">

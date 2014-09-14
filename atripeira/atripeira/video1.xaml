@@ -1,0 +1,48 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="atripeira.video1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="False">
+
+    <!--LayoutRoot contains the root grid where all other page content is placed-->
+    <Grid x:Name="LayoutRoot">
+        <phone:Panorama Title="my application">
+
+            <!--Panorama item one-->
+            <phone:PanoramaItem Header="item1">
+                <Grid Width="auto" DataContext="Items">
+                    <toolkit:WrapPanel Margin="0,0,0,260">
+                        <Border Background="#B2EE4D10" Height="173" Width="173" Margin="12,0,0,0">
+                            <StackPanel HorizontalAlignment="Left" Height="535" VerticalAlignment="Top" Width="456">
+                                <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="587" Width="436"  Text="{Binding Nome}"/>
+                            </StackPanel>
+                        </Border>
+                    </toolkit:WrapPanel>
+                    <toolkit:WrapPanel Margin="0,223,0,0">
+                        <Border Background="#B2EE4D10" Height="173" Width="173" Margin="12,0,0,0">
+                            <StackPanel HorizontalAlignment="Left" Height="535" VerticalAlignment="Top" Width="456">
+                                <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="587" Width="436"  Text="{Binding Nome}"/>
+                            </StackPanel>
+                        </Border>
+                    </toolkit:WrapPanel>
+                </Grid>
+            </phone:PanoramaItem>
+
+            <!--Panorama item two-->
+            <phone:PanoramaItem Header="item2">
+                <Grid/>
+            </phone:PanoramaItem>
+        </phone:Panorama>
+    </Grid>
+
+</phone:PhoneApplicationPage>
