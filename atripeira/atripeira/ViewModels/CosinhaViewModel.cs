@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace atripeira.ViewModels
 {
-    class CosinhaViewModel : INotifyPropertyChanged
+    public class CosinhaViewModel : INotifyPropertyChanged
     {
         private string _idRest;
         /// <summary>

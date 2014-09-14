@@ -14,12 +14,10 @@ namespace atripeira.ViewModels {
         private IMobileServiceTable<Cosinha> todoTable = App.MobileService.GetTable<Cosinha>(); 
         
         public CosinhasViewModel() { 
-            //this.Items = new ObservableCollection<CosinhaViewModel>(); 
-        } /// <summary> /// A collection for ItemViewModel objects. /// </summary> 
-          /// 
-          /// 
-          /// 
-          //public ObservableCollection<CosinhaViewModel> Items { get; private set; } 
+            this.Items = new ObservableCollection<CosinhaViewModel>(); 
+        } 
+
+          public ObservableCollection<CosinhaViewModel> Items { get; private set; } 
         private string _sampleProperty = "Sample Runtime Property Value"; 
         /// <summary> /// 
         /// Sample ViewModel property; this property is used in the view to display its value using a Binding /// </summary> /// <returns></returns> 

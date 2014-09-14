@@ -20,11 +20,12 @@ namespace atripeira
     {
         private MainViewModel ViewModel1 = new MainViewModel();
         private cartaViewModel cartaViewModel1 = new cartaViewModel();
+        private ComentarioViewModel comentarioViewModel = new ComentarioViewModel();
 
+        private string id;
         public Restaurante()
         {
-            InitializeComponent();
-            DataContext = cartaViewModel1;
+            InitializeComponent();           
         }
 
         protected override async void OnNavigatedTo(NavigationEventArgs e)
@@ -33,6 +34,8 @@ namespace atripeira
             
             if (NavigationContext.QueryString.TryGetValue("parameter", out parameter))
             {
+                id = parameter;
+                DataContext = ViewModel1;
                 var rest = await ViewModel1.LoadDataRestaurante(parameter);
                 txtNome.Text = rest.nome;
                 txtMorada.Text = rest.morada;
@@ -42,6 +45,9 @@ namespace atripeira
                 ratingNum.Text = rest.Pontuacao;
 
                 cartaViewModel1.LoadData(parameter);
+                comentarioViewModel.LoadData(parameter);
+                ViewModel1.Items1 = cartaViewModel1.Items;
+                ViewModel1.Items2 = comentarioViewModel.Items;
                 mapa(rest.morada + ", Porto, Portugal");
             }
         }
@@ -114,8 +120,39 @@ namespace atripeira
 
         private void ApplicationBarIconButton_Click(object sender, EventArgs e)
         {
+            if (txtboxNome.Text==""||txtboxNome.Text=="Nome")
+            {
+                MessageBox.Show("Erro!! Nome não válido!");
+            }
+            else
+            {
+                if (txtboxPais.Text == "" || txtboxPais.Text == "País")
+                {
+                    MessageBox.Show("Erro!! País não válido!");
+                }
+                else {
+                    if (txtboxComentario.Text == "" || txtboxComentario.Text == "Comentário")
+                    {
+                        MessageBox.Show("Erro!! Comentário não válido!");
+                    }
+                    else {
+                        Comentario com = new Comentario();
+                        com.idRest = id;
+                        com.nome = txtboxNome.Text;
+                        com.comentario = txtboxComentario.Text;
+                        com.pais = txtboxPais.Text;
 
-            MessageBox.Show("Comentário inserido com sucesso!");
+                        comentarioViewModel.insertData(com);
+
+                        MessageBox.Show("Comentário inserido com sucesso!");
+                    }
+                }
+            }
+        }
+
+        private void ApplicationBarIconButton_Click_1(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Mensagem.xaml", UriKind.Relative));
         }
     }
 

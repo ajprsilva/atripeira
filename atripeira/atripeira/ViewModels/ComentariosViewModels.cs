@@ -3,7 +3,7 @@ using System.ComponentModel;
 
 namespace atripeira.ViewModels
 {
-    public class ItemViewModel : INotifyPropertyChanged
+    public class ComentariosViewModels : INotifyPropertyChanged
     {
         private string _Nome;
         /// <summary>
@@ -26,126 +26,65 @@ namespace atripeira.ViewModels
             }
         }
 
-        private string _Morada;
+        private string _Pais;
         /// <summary>
         /// Sample ViewModel property; this property is used in the view to display its value using a Binding.
         /// </summary>
         /// <returns></returns>
-        public string Morada
+        public string Pais
         {
             get
             {
-                return _Morada;
+                return _Pais;
             }
             set
             {
-                if (value != _Morada)
+                if (value != _Pais)
                 {
-                    _Morada = value;
+                    _Pais = value;
                     NotifyPropertyChanged("Morada");
                 }
             }
         }
 
-        private int _Capacidade;
+        private string _Comentario;
         /// <summary>
         /// Sample ViewModel property; this property is used in the view to display its value using a Binding.
         /// </summary>
         /// <returns></returns>
-        public int Capacidade
+        public string Comentario
         {
             get
             {
-                return _Capacidade;
+                return _Comentario;
             }
             set
             {
-                if (value != _Capacidade)
+                if (value != _Comentario)
                 {
-                    _Capacidade = value;
+                    _Comentario = value;
                     NotifyPropertyChanged("Capacidade");
                 }
             }
         }
 
-        private int _Contacto;
+        private string _iDrest;
         /// <summary>
         /// Sample ViewModel property; this property is used in the view to display its value using a Binding.
         /// </summary>
         /// <returns></returns>
-        public int Contacto
+        public string iDRest
         {
             get
             {
-                return _Contacto;
+                return _iDrest;
             }
             set
             {
-                if (value != _Contacto)
+                if (value != _iDrest)
                 {
-                    _Contacto = value;
+                    _iDrest = value;
                     NotifyPropertyChanged("Contacto");
-                }
-            }
-        }
-
-        private string _Descricao;
-        /// <summary>
-        /// Sample ViewModel property; this property is used in the view to display its value using a Binding.
-        /// </summary>
-        /// <returns></returns>
-        public string Descricao
-        {
-            get
-            {
-                return _Descricao;
-            }
-            set
-            {
-                if (value != _Descricao)
-                {
-                    _Descricao = value;
-                    NotifyPropertyChanged("Descricao");
-                }
-            }
-        }
-
-        private string _DiaSemana;
-        public string DiaSemana
-        {
-            get
-            {
-                return _DiaSemana;
-            }
-            set
-            {
-                if (value != _DiaSemana)
-                {
-                    _DiaSemana = value;
-                    NotifyPropertyChanged("Descricao");
-                }
-            }
-        }
-
-        
-
-        private double _Pontuacao;
-        /// <summary>
-        /// Sample ViewModel property; this property is used in the view to display its value using a Binding.
-        /// </summary>
-        /// <returns></returns>
-        public double Pontuacao
-        {
-            get
-            {
-                return _Pontuacao;
-            }
-            set
-            {
-                if (value != _Pontuacao)
-                {
-                    _Pontuacao = value;
-                    NotifyPropertyChanged("Pontuacao");
                 }
             }
         }

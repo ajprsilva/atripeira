@@ -105,6 +105,8 @@ namespace atripeira
             NavigationService.Navigate(new Uri("/AreaReservada.xaml", UriKind.Relative));
         }
 
+        private int t = 0;
+
         private void ApplicationBarIconButton_Click(object sender, EventArgs e)
         {
             viewModel= new MainViewModel();
@@ -113,7 +115,15 @@ namespace atripeira
             DataContext = viewModel;
             try
             {
-                viewModel.LoadData();
+                if (t == 0)
+                {
+                    viewModel.LoadAllData();
+                    t = 1;
+                }
+                else {
+                    viewModel.LoadData();
+                    t = 0;
+                }                    
             }
             catch (Exception ex)
             {

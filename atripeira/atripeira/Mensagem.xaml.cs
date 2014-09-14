@@ -26,7 +26,7 @@ namespace atripeira
 
             texto = "O Cliente " + nome.Text + " efectuou uma reserva com " + num.Text + " pessoas para as " + hora.Text + " horas";
 
-            smsComposeTask.To = "+351919856385";
+            smsComposeTask.To = "+351918342595";
             smsComposeTask.Body = texto;
 
             smsComposeTask.Show();

@@ -28,5 +28,8 @@ namespace atripeira.DataModels
 
         [JsonProperty(PropertyName = "Descricao")]
         public string Descricao { get; set; }
+
+        [JsonProperty(PropertyName = "diaSemana")]
+        public string diaSemana { get; set; }
     }
 }

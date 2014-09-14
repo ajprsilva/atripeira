@@ -102,6 +102,7 @@
       <DependentUpon>Carta.xaml</DependentUpon>
     </Compile>
     <Compile Include="DataModels\carta.cs" />
+    <Compile Include="DataModels\Comentario.cs" />
     <Compile Include="DataModels\Cosinha.cs" />
     <Compile Include="DataModels\restaurante.cs" />
     <Compile Include="DataModels\tripas.cs" />
@@ -146,14 +147,13 @@
     <Compile Include="Tripas.xaml.cs">
       <DependentUpon>Tripas.xaml</DependentUpon>
     </Compile>
-    <Compile Include="video1.xaml.cs">
-      <DependentUpon>video1.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Videos.xaml.cs">
       <DependentUpon>Videos.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\carta1ViewModel.cs" />
     <Compile Include="ViewModels\cartaViewModel.cs" />
+    <Compile Include="ViewModels\ComentariosViewModels.cs" />
+    <Compile Include="ViewModels\ComentarioViewModel.cs" />
     <Compile Include="ViewModels\CosinhasViewModel.cs" />
     <Compile Include="ViewModels\CosinhaViewModel.cs" />
     <Compile Include="ViewModels\ItemViewModel.cs" />
@@ -220,10 +220,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Tripas.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="video1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

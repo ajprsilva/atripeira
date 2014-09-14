@@ -75,7 +75,6 @@ namespace atripeira.ViewModels
             }            
             
             foreach(carta cat in items){
-                 // Sample data; replace with real data
                 if (cat.idRest==id)
                     this.Items.Add(new carta1ViewModel() { iD=cat.Id, Nome=cat.nome, Descricao=cat.descricao, Preco=cat.preco, idRest=cat.idRest});
             }

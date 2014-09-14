@@ -27,6 +27,7 @@
 
             <!--Pivot item one-->
             <phone:PivotItem Header="Restaurante" Background="Transparent" Foreground="Black">
+                <ScrollViewer Grid.Row="1" Margin="12,0,12,0" >
                 <Grid HorizontalAlignment="Left" Height="531" VerticalAlignment="Top" Width="456">
                     <toolkit:WrapPanel HorizontalAlignment="Left" Height="531" VerticalAlignment="Top" Width="456" Background="Transparent">
                         <StackPanel HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Margin="0,0,-100,-100" Background="#B2EE4D10"/>
@@ -43,7 +44,28 @@
                                 <TextBlock TextWrapping="Wrap"  Name="txtIntro" Text="Texto de introdução" Height="100"/>
                             </StackPanel>
                             <toolkit:WrapPanel Height="325">
-                                <StackPanel HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Margin="0,0,-100,-100" Background="#B2EE4D10"/>
+                                <Grid Margin="0,0,0,224">
+                                    <phone:Panorama >
+                                        <phone:PanoramaItem Orientation="Horizontal">
+                                            <Grid Width="auto" Height="91" VerticalAlignment="Top">
+                                                <StackPanel Orientation="Horizontal">
+                                                    <Border Background="#B2EE4D10" Height="50" Width="50" Margin="12,0,0,0"/>
+                                                    <Border Background="#B2EE4D10" Height="50" Width="50" Margin="12,0,0,0"/>
+                                                    <Border Background="#B2EE4D10" Height="50" Width="50" Margin="12,0,0,0"/>
+                                                    <Border Background="#B2EE4D10" Height="50" Width="50" Margin="12,0,0,0"/>
+                                                    <Border Background="#B2EE4D10" Height="50" Width="50" Margin="12,0,0,0"/>
+                                                    <Border Background="#B2EE4D10" Height="50" Width="50" Margin="12,0,0,0"/>
+                                                    <Border Background="#B2EE4D10" Height="50" Width="50" Margin="12,0,0,0"/>
+                                                    <Border Background="#B2EE4D10" Height="50" Width="50" Margin="12,0,0,0"/>
+                                                    <Border Background="#B2EE4D10" Height="50" Width="50" Margin="12,0,0,0"/>
+                                                    <Border Background="#B2EE4D10" Height="50" Width="50" Margin="12,0,0,0"/>
+                                                    <Border Background="#B2EE4D10" Height="50" Width="50" Margin="12,0,0,0"/>
+                                                    <Border Background="#B2EE4D10" Height="50" Width="50" Margin="12,0,0,0"/>
+                                                </StackPanel>
+                                            </Grid>
+                                        </phone:PanoramaItem>
+                                    </phone:Panorama>
+                                </Grid>
                             </toolkit:WrapPanel>
                             <toolkit:WrapPanel Height="325">
                                 <StackPanel HorizontalAlignment="Left" Height="190" VerticalAlignment="Top" Width="456" Margin="3,-203,-459,0">
@@ -65,6 +87,7 @@
                         </StackPanel>
                     </toolkit:WrapPanel>
                 </Grid>
+                </ScrollViewer>
             </phone:PivotItem>
 
             <!-- tem de ser mudada toda a janela! Motivos: o mapa, a opiniao cliente nao é scrollable e faltam as promoçoes, se é que fica-->
@@ -193,48 +216,63 @@
                         <StackPanel Height="78" Background="#B2FFFFFF">
                             <TextBlock TextWrapping="Wrap" Text="Comentários:"/>
                         </StackPanel>
-                        <StackPanel Height="289">
-                            <TextBox Height="288" TextWrapping="Wrap" Text="Comentário" Margin="-13,0,-13,0" VerticalScrollBarVisibility="Auto" AcceptsReturn="true"/>
+                        <StackPanel Height="448">
+                            <TextBox Text="Nome" Name="txtboxNome"/>
+                            <TextBox Text="País" Name="txtboxPais"/>
+                            <TextBox Height="304" TextWrapping="Wrap" Name="txtboxComentario" Text="Comentário" Margin="-13,0,-13,0" VerticalScrollBarVisibility="Auto" AcceptsReturn="true"/>
                         </StackPanel>
                     </toolkit:WrapPanel>
                 </ScrollViewer>
             </phone:PivotItem>
 
-            <phone:PivotItem Header="Comentários" HorizontalAlignment="Left" Height="630" Margin="0" VerticalAlignment="Top" Width="480">
-                <phone:LongListSelector Height="620" Width="480">
-                    <phone:LongListSelector.ListHeaderTemplate>
-                        <DataTemplate>
-                            <Grid Margin="12,0,0,38">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="*"/>
-                                </Grid.RowDefinitions>
-                            </Grid>
-                        </DataTemplate>
-                    </phone:LongListSelector.ListHeaderTemplate>
-                    <phone:LongListSelector.ItemTemplate>
-                        <DataTemplate>
-                            <StackPanel Orientation="Horizontal" Margin="12,2,0,4" Height="105" Width="432">
-                                <!--Replace rectangle with image-->
-                                <Border BorderThickness="1" Width="99" Height="99" BorderBrush="#B2EE4D10" Background="#B2EE4D10"/>
-                                <StackPanel Width="311" Margin="8,-7,0,0">
-                                    <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Width="311" Background="#CCFFFFFF">
-                                        <TextBlock Text="{Binding Nome}" TextWrapping="Wrap" Margin="10,0" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}" Foreground="Black" />
+            <phone:PivotItem Header="Comentarios">
+                <toolkit:WrapPanel>
+                    <StackPanel Margin="0,0,-456,0">
+                        <phone:LongListSelector Margin="0,-38,-22,2" ItemsSource="{Binding Items2}" Name="lst" Height="639">
+                            <phone:LongListSelector.ListHeaderTemplate>
+                                <DataTemplate>
+                                    <Grid Margin="12,0,0,38">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+                                    </Grid>
+                                </DataTemplate>
+                            </phone:LongListSelector.ListHeaderTemplate>
+                            <phone:LongListSelector.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal" Margin="12,2,0,4" Height="105" Width="432">
+                                        <!--Replace rectangle with image-->
+                                        <Border BorderThickness="1" Width="99" Height="99" BorderBrush="#B2EE4D10" Background="#B2EE4D10"/>
+                                        <StackPanel Width="311" Margin="8,-7,0,0">
+                                            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Width="311" Background="#CCFFFFFF">
+                                                <TextBlock  TextWrapping="Wrap" Margin="10,0" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}" Foreground="Black" >
+                                                    <Run Text="{Binding Nome}" />
+                                                    <Run Text=" - " />
+                                                    <Run Text="{Binding Pais}" />
+                                                </TextBlock>
+                                            </StackPanel>
+                                            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Width="311" Background="#CCFFFFFF">
+                                                <TextBlock  TextWrapping="Wrap" Margin="10,0" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}" Foreground="Black" >
+                                                    <Run Text="{Binding Comentario}" />
+                                                </TextBlock>
+                                            </StackPanel>
+                                        </StackPanel>
                                     </StackPanel>
-                                    <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Width="311" Height="46" Background="#CCFFFFFF">
-                                        <TextBlock Text="{Binding Nome}" TextWrapping="Wrap" Margin="10,0" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}" Foreground="Black" />
-                                    </StackPanel>
-                                </StackPanel>
-                            </StackPanel>
-                        </DataTemplate>
-                    </phone:LongListSelector.ItemTemplate>
-                </phone:LongListSelector>
+                                </DataTemplate>
+                            </phone:LongListSelector.ItemTemplate>
+                        </phone:LongListSelector>
+                    </StackPanel>
+                    <StackPanel Margin="0,281,-456,-281">
+                        <ProgressBar IsIndeterminate="True" Visibility="Collapsed" Height="10" Width="200" Name="progress"/>
+                    </StackPanel>
+                </toolkit:WrapPanel>
 
             </phone:PivotItem>
-            
+
             <!--Pivot item 3-->
             <phone:PivotItem Header="Carta" Margin="10,38,14,-10">
-                <phone:LongListSelector Margin="0,-38,-22,2" ItemsSource="{Binding Items}">
+                <phone:LongListSelector Margin="0,-38,-22,2" ItemsSource="{Binding Items1}">
                     <phone:LongListSelector.ListHeaderTemplate>
                         <DataTemplate>
                             <Grid Margin="12,0,0,38">
@@ -288,7 +326,7 @@
 
     <phone:PhoneApplicationPage.Resources>
         <shell:ApplicationBar x:Key="resta" IsVisible="True" IsMenuEnabled="True">
-            <shell:ApplicationBarIconButton IconUri="/Assets/View-Small-Icons-01.png" Text="Reserva"/>
+            <shell:ApplicationBarIconButton IconUri="/Assets/View-Small-Icons-01.png" Text="Reserva" Click="ApplicationBarIconButton_Click_1"/>
             <shell:ApplicationBar.MenuItems>
                 <shell:ApplicationBarMenuItem Text="Área Reservada"/>
                 <shell:ApplicationBarMenuItem Text="Ajuda"/>

@@ -10,26 +10,21 @@ using System.Windows;
 
 namespace atripeira.ViewModels
 {
-    public class MainViewModel : INotifyPropertyChanged
+    public class ComentarioViewModel: INotifyPropertyChanged
     {
 
-        private MobileServiceCollection<restaurante, restaurante> items;
-        private IMobileServiceTable<restaurante> todoTable = App.MobileService.GetTable<restaurante>();
+        private MobileServiceCollection<Comentario, Comentario> items;
+        private IMobileServiceTable<Comentario> todoTable = App.MobileService.GetTable<Comentario>();
 
-        public MainViewModel()
+        public ComentarioViewModel()
         {
-            this.Items = new ObservableCollection<ItemViewModel>();
-            this.Items1 = new ObservableCollection<carta1ViewModel>();
-            this.Items2 = new ObservableCollection<ComentariosViewModels>();
-
+            this.Items = new ObservableCollection<ComentariosViewModels>();
         }
 
         /// <summary>
         /// A collection for ItemViewModel objects.
         /// </summary>
-        public ObservableCollection<ItemViewModel> Items { get; private set; }
-        public ObservableCollection<carta1ViewModel> Items1 { get;  set; }
-        public ObservableCollection<ComentariosViewModels> Items2 { get;  set; }
+        public ObservableCollection<ComentariosViewModels> Items { get; private set; }
 
         private string _sampleProperty = "Sample Runtime Property Value";
         /// <summary>
@@ -72,38 +67,10 @@ namespace atripeira.ViewModels
         /// <summary>
         /// Creates and adds a few ItemViewModel objects into the Items collection.
         /// </summary>
-        public async void LoadData()
+        public async void LoadData(string id)
         {
             // Sample data; replace with real data
-            string dd = string.Empty;
 
-            try
-            {
-                DayOfWeek day = new DayOfWeek();
-
-                dd =System.Globalization.DateTimeFormatInfo.CurrentInfo.GetDayName(day);
-                items = await todoTable.CreateQuery().ToCollectionAsync();
-            }
-            catch (Exception ex)
-            {
-                string st = ex.Message.ToString();
-            }
-
-            Deployment.Current.Dispatcher.BeginInvoke(()=>{
-                foreach (restaurante resta in items) {
-                    if(dd==resta.diaSemana)
-                        this.Items.Add(new ItemViewModel() { Nome = resta.nome, Pontuacao = Double.Parse(resta.Pontuacao.Replace('.',',')), ID= resta.Id, Descricao=resta.Descricao});
-                }
-            });
-
-            
-
-            this.IsDataLoaded = true;
-        }
-
-        public async void LoadAllData()
-        {
-            
             try
             {
                 items = await todoTable.CreateQuery().ToCollectionAsync();
@@ -113,32 +80,29 @@ namespace atripeira.ViewModels
                 string st = ex.Message.ToString();
             }
 
-            Deployment.Current.Dispatcher.BeginInvoke(() =>
-            {
-                foreach (restaurante resta in items)
+           foreach (Comentario resta in items)
                 {
-                    this.Items.Add(new ItemViewModel() { Nome = resta.nome, Pontuacao = Double.Parse(resta.Pontuacao.Replace('.', ',')), ID = resta.Id, Descricao = resta.Descricao });
+                    if(resta.idRest==id)
+                        this.Items.Add(new ComentariosViewModels() { Nome = resta.nome, iDRest= resta.idRest, ID = resta.Id, Pais = resta.pais, Comentario=resta.comentario });
                 }
-            });
 
-
+            
 
             this.IsDataLoaded = true;
         }
 
-        public async Task<restaurante> LoadDataRestaurante(string id)
-        {
+        public async void insertData(Comentario com) {
             try
             {
-                items = await todoTable.Where(todoItem => todoItem.Id == id).ToCollectionAsync();
+                await todoTable.InsertAsync(com);
             }
             catch (Exception ex)
             {
-                string st = ex.Message.ToString();
+                
+                throw;
             }
-
-            return items[0];
         }
+       
 
         public event PropertyChangedEventHandler PropertyChanged;
         private void NotifyPropertyChanged(String propertyName)

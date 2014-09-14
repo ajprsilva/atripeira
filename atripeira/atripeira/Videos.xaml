@@ -16,7 +16,7 @@
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0" >
             <phone:Panorama>
-                <phone:PanoramaItem Header="item1" Orientation="Horizontal">
+                <phone:PanoramaItem Orientation="Horizontal">
                     <Grid Width="auto" Margin="0,-121,0,0">
                         <ItemsControl ItemsSource="{Binding Items}" Margin="0,0,0,332">
                             <ItemsControl.ItemTemplate>
@@ -31,7 +31,7 @@
                                 </DataTemplate>
                             </ItemsControl.ItemTemplate>
                         </ItemsControl>
-                        <ItemsControl ItemsSource="{Binding Items2}" Margin="0,-20,0,131">
+                        <ItemsControl ItemsSource="{Binding Items2}" Margin="0,0,0,131">
                             <ItemsControl.ItemTemplate>
                                 <DataTemplate>
                                     <StackPanel Orientation="Horizontal" Margin="0,223,0,61" Tap="StackPanel_Tap">
