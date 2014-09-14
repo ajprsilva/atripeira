@@ -10,7 +10,10 @@
     FontSize="{StaticResource PhoneFontSizeNormal}"
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d"
-    shell:SystemTray.IsVisible="True" Background="White">
+    shell:SystemTray.IsVisible="True">
+	<phone:PhoneApplicationPage.Background>
+		<ImageBrush Stretch="Fill"/>
+	</phone:PhoneApplicationPage.Background>
 	<phone:PhoneApplicationPage.Foreground>
 		<SolidColorBrush Color="{StaticResource PhoneForegroundColor}"/>
 	</phone:PhoneApplicationPage.Foreground>
@@ -39,9 +42,10 @@
             </Grid.ColumnDefinitions>
 
         </Grid>
-        <StackPanel HorizontalAlignment="Center" Margin="190,538,183,0" Grid.Row="1">
-            <TextBlock TextWrapping="Wrap" TextAlignment="Center" Padding="5" HorizontalAlignment="Center" Foreground="Black">
-        		<Run Text="Bem Vindo"/>
+        <StackPanel HorizontalAlignment="Center" Margin="0,538,0,0" Grid.Row="1" Width="480">
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center" Padding="5" Foreground="Black" FontSize="32">
+            	<Run Text="As Tripas mais próximas de si"/>
+            	<Run Text="!"/>
             </TextBlock>
         </StackPanel>
     </Grid>
