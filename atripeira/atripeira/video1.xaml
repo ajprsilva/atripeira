@@ -6,6 +6,7 @@
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    
     xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
     mc:Ignorable="d"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
@@ -15,44 +16,48 @@
     shell:SystemTray.IsVisible="False">
 
     <!--LayoutRoot contains the root grid where all other page content is placed-->
-    <Grid x:Name="LayoutRoot">
-        <phone:Panorama Title="my application">
+    <Grid x:Name="LayoutRoot" >
+        <phone:Panorama  Title="">
 
             <!--Panorama item one-->
-            <phone:PanoramaItem Header="item1" Orientation="Horizontal" >
-                <Grid Width="auto" DataContext="Items">
-                    <StackPanel DataContext="Items" Orientation="Horizontal" Margin="0,0,0,260">
-                        <Border Background="#B2EE4D10" Height="173" Width="173" Margin="12,0,0,0">
-                            <toolkit:WrapPanel HorizontalAlignment="Left" Height="189" VerticalAlignment="Top" Width="456" Margin="0,0,-283,-16">
-                                <TextBlock HorizontalAlignment="Left" Margin="10,120,0,-110" TextWrapping="Wrap" VerticalAlignment="Top" Height="46" Width="152"  Text="{Binding Nome}"/>
-                            </toolkit:WrapPanel>
-                        </Border>
-                        <Border Background="#B2EE4D10" Height="173" Width="173" Margin="12,0,0,0">
-                            <toolkit:WrapPanel HorizontalAlignment="Left" Height="189" VerticalAlignment="Top" Width="456" Margin="0,0,-283,-16">
-                                <TextBlock HorizontalAlignment="Left" Margin="10,120,0,-110" TextWrapping="Wrap" VerticalAlignment="Top" Height="46" Width="152"  Text="{Binding Nome}"/>
-                            </toolkit:WrapPanel>
-                        </Border>
-                        <Border Background="#B2EE4D10" Height="173" Width="173" Margin="12,0,0,0">
-                            <toolkit:WrapPanel HorizontalAlignment="Left" Height="189" VerticalAlignment="Top" Width="456" Margin="0,0,-283,-16">
-                                <TextBlock HorizontalAlignment="Left" Margin="10,120,0,-110" TextWrapping="Wrap" VerticalAlignment="Top" Height="46" Width="152"  Text="{Binding Nome}"/>
-                            </toolkit:WrapPanel>
-                        </Border>
-                        <Border Background="#B2EE4D10" Height="173" Width="173" Margin="12,0,0,0">
-                            <toolkit:WrapPanel HorizontalAlignment="Left" Height="189" VerticalAlignment="Top" Width="456" Margin="0,0,-283,-16">
-                                <TextBlock HorizontalAlignment="Left" Margin="10,120,0,-110" TextWrapping="Wrap" VerticalAlignment="Top" Height="46" Width="152"  Text="{Binding Nome}"/>
-                            </toolkit:WrapPanel>
-                        </Border>
-                    </StackPanel>
-                    
-                    <StackPanel  Orientation="Horizontal" Margin="0,223,0,61">
-                        <Border Background="#B2EE4D10" Height="173" Width="173" Margin="12,0,0,0">
-                            <toolkit:WrapPanel HorizontalAlignment="Left" Height="189" VerticalAlignment="Top" Width="456" Margin="0,0,-283,-16">
-                                <TextBlock HorizontalAlignment="Left" Margin="10,120,0,-110" TextWrapping="Wrap" VerticalAlignment="Top" Height="46" Width="152"  Text="{Binding Nome}"/>
-                            </toolkit:WrapPanel>
-                        </Border>
+            <phone:PanoramaItem Header="item1" Orientation="Horizontal">
+                <Grid Width="auto">
+                    <ItemsControl ItemsSource="{Binding Items}" Margin="0,136,0,0">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
 
-                    </StackPanel>
+
+                                <StackPanel  Orientation="Horizontal" Margin="0,0,0,260">
+                                    <Border Background="#B2EE4D10" Height="173" Width="173" Margin="12,0,0,0">
+                                        <toolkit:WrapPanel HorizontalAlignment="Left" Height="189" VerticalAlignment="Top" Width="456" Margin="0,0,-283,-16">
+                                            <TextBlock Name="temo" HorizontalAlignment="Left" Margin="10,120,0,-110" TextWrapping="Wrap" VerticalAlignment="Top" Height="46" Width="152"  Text="{Binding Nome}"/>
+                                        </toolkit:WrapPanel>
+                                    </Border>
+
+                                </StackPanel>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+
+                    </ItemsControl>
+
+                    <ItemsControl ItemsSource="{Binding Items2}" Margin="0,136,0,0">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel  Orientation="Horizontal" Margin="0,223,0,61">
+                                    <Border Background="#B2EE4D10" Height="173" Width="173" Margin="12,0,0,0">
+                                        <toolkit:WrapPanel HorizontalAlignment="Left" Height="189" VerticalAlignment="Top" Width="456" Margin="0,0,-283,-16">
+                                            <TextBlock HorizontalAlignment="Left" Margin="10,120,0,-110" TextWrapping="Wrap" VerticalAlignment="Top" Height="46" Width="152"  Text="{Binding Nome}"/>
+                                        </toolkit:WrapPanel>
+                                    </Border>
+
+                                </StackPanel>
+
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+
+                    </ItemsControl>
                 </Grid>
+
             </phone:PanoramaItem>
         </phone:Panorama>
     </Grid>
