@@ -125,6 +125,9 @@
     <Compile Include="Manutencao.xaml.cs">
       <DependentUpon>Manutencao.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Mensagem.xaml.cs">
+      <DependentUpon>Mensagem.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Perfil.xaml.cs">
       <DependentUpon>Perfil.xaml</DependentUpon>
     </Compile>
@@ -199,6 +202,10 @@
     <Page Include="Manutencao.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Mensagem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Perfil.xaml">
       <SubType>Designer</SubType>
